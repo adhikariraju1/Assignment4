@@ -1,0 +1,50 @@
+Effect of Income Inequality on Environment Performance Index (EPI)
+========================================================
+author: Mario Alonso Rodriguez and Raju Adhikari
+date: 29 November 2016
+autosize: true
+
+Table of Contents
+========================================================
+
+- Research Question
+- Theoretical Basis
+- Operationalization
+- Plots, Maps and other Descriptive Statistics
+- Regression and Other Inferential Statistics
+- Conclusion
+
+Research Question
+========================================================
+
+
+Unrefined Question:
+
+
+- Does income inequality have an effect on the environment ?
+
+Refined Question:
+
+- Does income inequality of a country affect its Environment Performance Index? If so, How?
+
+Theoritical Premise
+========================================================
+
+- Carbon emission and equal countries
+- Economic Development and unequal countries
+- Environment Performance Index
+
+
+Slide With Code
+========================================================
+
+```{r}
+summary(cars)
+```
+
+Slide With Plot
+========================================================
+
+```{r, echo=FALSE}
+plot(cars)
+```
