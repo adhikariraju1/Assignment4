@@ -27,13 +27,28 @@ Refined Question:
 
 - Does income inequality of a country affect its Environment Performance Index? If so, How?
 
-Theoritical Premise
+Theoretical Premise
 ========================================================
 
 - Carbon emission and equal countries
 - Economic Development and unequal countries
 - Environment Performance Index
 
+Operationalization
+========================================================
+
+- Explanatory Variable: 
+    - Gini coefficient (measure of income inequality)
+    - Source: WDI database...
+- Dependendent Variable: 
+    - EPI (measure of environment performance)
+    - Source: Yale...
+- Data Cleaning:
+    - djskdjsk
+    - ksjdskjdh
+    - sjkdskdsskh
+- Control Variables:
+    - 
 
 Slide With Code
 ========================================================
