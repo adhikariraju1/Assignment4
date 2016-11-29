@@ -6,12 +6,9 @@ library(stargazer)
 library(ggplot2)
 library(tidyr)
 library(plotly)
+library(xlsx)
 
 GINI <- WDI(country = 'all', start = '2002', end = '2012', indicator = c('SI.POV.GINI', 'NY.GDP.PCAP.CD', 'EN.ATM.CO2E.PC'), extra = TRUE)
-
-EPI <- import('http://epi.yale.edu/sites/default/files/2016EPI_Raw_Data.xls')
-
-EPI <- system.file("tests", "2014epi_backcasted_scores.xls", package = "xlsx")
 
 EPI2012 <- read.xlsx("2014epi_backcasted_scores.xls", 3)
 EPI2011 <- read.xlsx("2014epi_backcasted_scores.xls", 4)
@@ -69,10 +66,35 @@ names(Combined)[names(Combined)=="SI.POV.GINI"] <- "GiniCoeff"
 names(Combined)[names(Combined)=="NY.GDP.PCAP.CD"] <- "GDPperCapita"
 names(Combined)[names(Combined)=="EN.ATM.CO2E.PC"] <- "CO2emissions"
 
-plottest <- ggplot(data = Combined, aes(x = EPIValue,
-                                             y = GiniCoeff)) + geom_point()
-ggplotly(plottest)
-plot_ly(Combined, x = ~EPIValue, y = ~GiniCoeff,
+Combined$EPIValue <- as.numeric(as.character(Combined$EPIValue))
+
+####This is just for the data of 2012, to make the graphs and the maps
+
+GINI2012 <- WDI(country = 'all', start = '2012', end = '2012', indicator = c('SI.POV.GINI', 'NY.GDP.PCAP.CD', 'EN.ATM.CO2E.PC'), extra = TRUE)
+
+names(EPI2012)[names(EPI2012)=="iso"] <- "iso3c"
+
+
+names(GINI2012)[names(GINI2012)=="SI.POV.GINI"] <- "GINI"
+names(GINI2012)[names(GINI2012)=="NY.GDP.PCAP.CD"] <- "GDPPerCap"
+names(GINI2012)[names(GINI2012)=="EN.ATM.CO2E.PC"] <- "CO2EmPerCap"
+
+ 
+Combined2012 <- merge(GINI2012, EPI2012, by = c('iso3c'))
+
+sapply(Combined2012, class)
+sapply(EPI2012, class)
+Combined2012$EPI.2012 <- as.numeric(as.character(Combined2012$EPI.2012))
+
+plottest <- ggplot(data = Combined2012, aes(x = EPI.2012,
+                                        y = GINI)) + geom_point()
+
+plot_ly(Combined2012, x = ~EPI.2012, y = ~GINI,
         mode = 'markers')
 
+m1 <- lm(EPI.2012 ~ GINI, Combined2012)
+
+summary(m1)
+
+#### A simple regression shows that it is statistically significant and is in the direction that we wanted. 
 
