@@ -39,16 +39,45 @@ Operationalization
 
 - Explanatory Variable: 
     - Gini coefficient (measure of income inequality)
-    - Source: WDI database...
+    - Source: World Bank's API
 - Dependendent Variable: 
     - EPI (measure of environment performance)
-    - Source: Yale...
+    - Source: Yale Center for Environmental Law and Policy
 - Data Cleaning:
-    - djskdjsk
-    - ksjdskjdh
-    - sjkdskdsskh
+    - Excel File, Yeary data separated by sheets 
+    - Columns included items used to calculate EPI
+    - Merge the datasets
 - Control Variables:
-    - 
+    - Emissions per country, GDP per capita, ...
+
+Descriptive Statistics
+========================================================
+
+- Table
+- Maps
+- Plots
+
+Inferential Statistics
+========================================================
+
+- Regression Equation
+- Type of Data: Panel
+- Pooled OLS, FE, RE (Test to choose)
+- Interpretation of estimates and error
+
+Robustness
+========================================================
+
+- Heteroscedasticity
+- Other problems
+
+Website and Bibliography
+========================================================
+
+- Website : Link
+- Bibliography using BibTex
+
+
 
 Slide With Code
 ========================================================
