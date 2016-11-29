@@ -8,7 +8,7 @@ library(tidyr)
 library(plotly)
 library(xlsx)
 
-GINI <- WDI(country = 'all', start = '2002', end = '2012', indicator = c('SI.POV.GINI', 'NY.GDP.PCAP.CD', 'EN.ATM.CO2E.PC'), extra = TRUE)
+GINI <- WDI(country = 'all', start = '2002', end = '2012', indicator = c('SI.POV.GINI', 'NY.GDP.PCAP.PP.CD', 'EN.ATM.CO2E.PC'), extra = TRUE)
 
 EPI2012 <- read.xlsx("2014epi_backcasted_scores.xls", 3)
 EPI2011 <- read.xlsx("2014epi_backcasted_scores.xls", 4)
@@ -63,24 +63,26 @@ Combined <- merge(GINI, EPITest, by = c('iso3c', 'year'))
 
 names(Combined)
 names(Combined)[names(Combined)=="SI.POV.GINI"] <- "GiniCoeff"
-names(Combined)[names(Combined)=="NY.GDP.PCAP.CD"] <- "GDPperCapita"
+names(Combined)[names(Combined)=="NY.GDP.PCAP.PP.CD"] <- "GDPperCapPPP"
 names(Combined)[names(Combined)=="EN.ATM.CO2E.PC"] <- "CO2emissions"
 
 Combined$EPIValue <- as.numeric(as.character(Combined$EPIValue))
 
 ####This is just for the data of 2012, to make the graphs and the maps
 
-GINI2012 <- WDI(country = 'all', start = '2012', end = '2012', indicator = c('SI.POV.GINI', 'NY.GDP.PCAP.CD', 'EN.ATM.CO2E.PC'), extra = TRUE)
+GINI2012 <- WDI(country = 'all', start = '2012', end = '2012', indicator = c('SI.POV.GINI', 'NY.GDP.PCAP.PP.CD', 'EN.ATM.CO2E.PC'), extra = TRUE)
 
 names(EPI2012)[names(EPI2012)=="iso"] <- "iso3c"
 
 
 names(GINI2012)[names(GINI2012)=="SI.POV.GINI"] <- "GINI"
-names(GINI2012)[names(GINI2012)=="NY.GDP.PCAP.CD"] <- "GDPPerCap"
+names(GINI2012)[names(GINI2012)=="NY.GDP.PCAP.PP.CD"] <- "GDPPerCapPPP"
 names(GINI2012)[names(GINI2012)=="EN.ATM.CO2E.PC"] <- "CO2EmPerCap"
 
  
 Combined2012 <- merge(GINI2012, EPI2012, by = c('iso3c'))
+
+Combined2012 <- Combined2012[complete.cases(Combined2012),]
 
 sapply(Combined2012, class)
 sapply(EPI2012, class)
@@ -89,6 +91,8 @@ Combined2012$EPI.2012 <- as.numeric(as.character(Combined2012$EPI.2012))
 plottest <- ggplot(data = Combined2012, aes(x = EPI.2012,
                                         y = GINI)) + geom_point()
 
+ggplotly(plottest)
+
 plot_ly(Combined2012, x = ~EPI.2012, y = ~GINI,
         mode = 'markers')
 
@@ -96,5 +100,9 @@ m1 <- lm(EPI.2012 ~ GINI, Combined2012)
 
 summary(m1)
 
-#### A simple regression shows that it is statistically significant and is in the direction that we wanted. 
+m2 <- lm(EPI.2012 ~ GINI + GDPPerCapPPP, Combined2012)
+
+summary(m2)
+
+#### A simple regression shows that it is statistically significant and is in the direction that we wanted. Even when controlling for GDP per capita with Purchasing Power Parity, the problem is that the coefficients decrease a lot because the variable is in USD, maybe we can introduce a dummy by category
 
