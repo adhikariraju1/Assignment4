@@ -88,8 +88,8 @@ sapply(Combined2012, class)
 sapply(EPI2012, class)
 Combined2012$EPI.2012 <- as.numeric(as.character(Combined2012$EPI.2012))
 
-plottest <- ggplot(data = Combined2012, aes(x = EPI.2012,
-                                        y = GINI)) + geom_point()
+plottest <- ggplot(data = Combined2012, aes(x = GINI,
+                                        y = EPI.2012)) + geom_point()
 
 ggplotly(plottest)
 
