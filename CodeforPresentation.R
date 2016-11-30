@@ -1,4 +1,4 @@
-setwd('/Users/mariorodriguez/Desktop/Assignment4')
+setwd('C:/RajuPC/CollaborativeSSDA/Assignments/Assignment4')
 library(WDI)
 library(countrycode)
 library(rio)
@@ -6,6 +6,7 @@ library(stargazer)
 library(ggplot2)
 library(tidyr)
 library(plotly)
+library(rJava)
 library(xlsx)
 
 GINI <- WDI(country = 'all', start = '2002', end = '2012', indicator = c('SI.POV.GINI', 'NY.GDP.PCAP.PP.CD', 'EN.ATM.CO2E.PC'), extra = TRUE)
