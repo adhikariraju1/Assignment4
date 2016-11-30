@@ -1,0 +1,72 @@
+"","iso3c","iso2c","country","year","GINI","GDPPerCapPPP","CO2EmPerCap","region","capital","longitude","latitude","income","lending","EPI.2012"
+"4","ALB","AL","Albania",2012,28.96,10361.433216136,1.62472196333623,"Europe & Central Asia (all income levels)","Tirane","19.8172","41.3317","Upper middle income","IBRD",54.73
+"7","ARG","AR","Argentina",2012,42.49,19686.6091339069,4.56963523938012,"Latin America & Caribbean (all income levels)","Buenos Aires","-58.4173","-34.6118","Upper middle income","IBRD",49.55
+"8","ARM","AM","Armenia",2012,30.48,7401.85639769464,1.91208959087599,"Europe & Central Asia (all income levels)","Yerevan","44.509","40.1596","Lower middle income","Blend",61.67
+"12","AUT","AT","Austria",2012,30.48,45858.2468363681,7.38403220122062,"Europe & Central Asia (all income levels)","Vienna","16.3798","48.2201","High income: OECD","Not classified",78.32
+"15","BEL","BE","Belgium",2012,27.59,41930.6618333441,8.28483788011157,"Europe & Central Asia (all income levels)","Brussels","4.36761","50.8371","High income: OECD","Not classified",66.61
+"19","BGR","BG","Bulgaria",2012,36.01,16097.8343137084,6.14204310276862,"Europe & Central Asia (all income levels)","Sofia","23.3238","42.7105","Upper middle income","IBRD",64.01
+"23","BLR","BY","Belarus",2012,26.53,17218.3561003897,6.68034097633136,"Europe & Central Asia (all income levels)","Minsk","27.5766","53.9678","Upper middle income","IBRD",67.69
+"26","BOL","BO","Bolivia",2012,46.7,5899.78130262682,1.83551243792951,"Latin America & Caribbean (all income levels)","La Paz","-66.1936","-13.9908","Lower middle income","Blend",50.48
+"27","BRA","BR","Brazil",2012,52.67,15246.2607662872,2.32225814003511,"Latin America & Caribbean (all income levels)","Brasilia","-47.9292","-15.7801","Upper middle income","IBRD",52.97
+"30","BTN","BT","Bhutan",2012,38.81,7251.43319165982,1.09954135410126,"South Asia","Thimphu","89.6177","27.5768","Lower middle income","IDA",46.86
+"34","CHE","CH","Switzerland",2012,31.64,57205.3721892359,4.71944729313164,"Europe & Central Asia (all income levels)","Bern","7.44821","46.948","High income: OECD","Not classified",87.67
+"36","CHN","CN","China",2012,42.16,11219.927669958,7.41895460781301,"East Asia & Pacific (all income levels)","Beijing","116.286","40.0495","Upper middle income","IBRD",43
+"39","COD","CD","Congo, Dem. Rep.",2012,42.1,652.38858743842,0.0364137681039835,"Sub-Saharan Africa (all income levels)","Kinshasa","15.3222","-4.325","Low income","IDA",25.01
+"41","COL","CO","Colombia",2012,53.54,12058.461303685,1.70377260152499,"Latin America & Caribbean (all income levels)","Bogota","-74.082","4.60987","Upper middle income","IBRD",50.77
+"43","CRI","CR","Costa Rica",2012,48.61,13839.4689225844,1.66877073956393,"Latin America & Caribbean (all income levels)","San Jose","-84.0089","9.63701","Upper middle income","IBRD",58.53
+"46","CYP","CY","Cyprus",2012,34.31,31920.4454737569,6.12734491983108,"Europe & Central Asia (all income levels)","Nicosia","33.3736","35.1676","High income: nonOECD","Not classified",66.23
+"47","CZE","CZ","Czech Republic",2012,26.13,28727.9072629398,9.61268363875771,"Europe & Central Asia (all income levels)","Prague","14.4205","50.0878","High income: OECD","Not classified",81.47
+"49","DJI","DJ","Djibouti",2012,45.13,2932.23334234064,0.60610220275265,"Middle East & North Africa (all income levels)","Djibouti","43.1425","11.5806","Lower middle income","IDA",28.52
+"51","DNK","DK","Denmark",2012,29.08,44246.3306156663,6.5108659961814,"Europe & Central Asia (all income levels)","Copenhagen","12.5681","55.6763","High income: OECD","Not classified",76.92
+"52","DOM","DO","Dominican Republic",2012,45.68,11740.0536291201,2.23991337893829,"Latin America & Caribbean (all income levels)","Santo Domingo","-69.8908","18.479","Upper middle income","IBRD",53.24
+"54","ECU","EC","Ecuador",2012,46.57,10512.4366955457,2.62477365500928,"Latin America & Caribbean (all income levels)","Quito","-78.5243","-0.229498","Upper middle income","IBRD",58.54
+"57","ESP","ES","Spain",2012,35.89,32235.5959172997,5.66093880333453,"Europe & Central Asia (all income levels)","Madrid","-3.70327","40.4167","High income: OECD","Not classified",79.79
+"58","EST","EE","Estonia",2012,33.15,25921.0285969625,13.3240003749917,"Europe & Central Asia (all income levels)","Tallinn","24.7586","59.4392","High income: OECD","Not classified",74.66
+"60","FIN","FI","Finland",2012,27.12,40437.5938723363,9.01853833350788,"Europe & Central Asia (all income levels)","Helsinki","24.9525","60.1608","High income: OECD","Not classified",75.72
+"62","FRA","FR","France",2012,33.1,37462.3250299433,5.07093102186285,"Europe & Central Asia (all income levels)","Paris","2.35097","48.8566","High income: OECD","Not classified",71.05
+"65","GBR","GB","United Kingdom",2012,32.57,37569.3152811917,7.33431085881856,"Europe & Central Asia (all income levels)","London","-0.126236","51.5002","High income: OECD","Not classified",77.35
+"66","GEO","GE","Georgia",2012,41.35,8026.50712956533,1.92313777777778,"Europe & Central Asia (all income levels)","Tbilisi","44.793","41.71","Lower middle income","Blend",47.23
+"69","GIN","GN","Guinea",2012,33.73,1219.54715182902,0.221998428552227,"Sub-Saharan Africa (all income levels)","Conakry","-13.7","9.51667","Low income","IDA",28.03
+"73","GRC","GR","Greece",2012,36.68,25980.0865157009,7.24036725721686,"Europe & Central Asia (all income levels)","Athens","23.7166","37.9792","High income: OECD","Not classified",73.28
+"80","HND","HN","Honduras",2012,57.4,4632.09510795154,1.16132340571792,"Latin America & Caribbean (all income levels)","Tegucigalpa","-87.4667","15.1333","Lower middle income","IDA",48.87
+"81","HRV","HR","Croatia",2012,32.51,21016.0187293145,4.25598222683793,"Europe & Central Asia (all income levels)","Zagreb","15.9614","45.8069","High income: nonOECD","IBRD",62.23
+"82","HTI","HT","Haiti",2012,60.79,1614.08582057792,0.225248590024053,"Latin America & Caribbean (all income levels)","Port-au-Prince","-72.3288","18.5392","Low income","IDA",19.01
+"83","HUN","HU","Hungary",2012,30.55,22701.4502235308,4.48784500001109,"Europe & Central Asia (all income levels)","Budapest","19.0408","47.4984","High income: OECD","Not classified",70.28
+"87","IRL","IE","Ireland",2012,32.52,46063.3445925379,7.7874534788987,"Europe & Central Asia (all income levels)","Dublin","-6.26749","53.3441","High income: OECD","Not classified",74.67
+"90","ISL","IS","Iceland",2012,26.94,40278.3870438051,5.83123386422879,"Europe & Central Asia (all income levels)","Reykjavik","-21.8952","64.1353","High income: OECD","Not classified",76.5
+"92","ITA","IT","Italy",2012,35.16,35899.7799658795,6.20504432360671,"Europe & Central Asia (all income levels)","Rome","12.4823","41.8955","High income: OECD","Not classified",74.36
+"96","KAZ","KZ","Kazakhstan",2012,27.46,23248.9925905127,14.5741598464693,"Europe & Central Asia (all income levels)","Astana","71.4382","51.1879","Upper middle income","IBRD",51.07
+"98","KGZ","KG","Kyrgyz Republic",2012,27.36,2922.70287320038,1.804986445998,"Europe & Central Asia (all income levels)","Bishkek","74.6057","42.8851","Low income","IDA",40.63
+"99","KHM","KH","Cambodia",2012,30.76,2846.65744469837,0.367880406586861,"East Asia & Pacific (all income levels)","Phnom Penh","104.874","11.5556","Low income","IDA",35.44
+"104","LAO","LA","Lao PDR",2012,37.89,4580.94739748603,0.333670062798835,"East Asia & Pacific (all income levels)","Vientiane","102.177","18.5826","Lower middle income","IDA",40.37
+"110","LKA","LK","Sri Lanka",2012,39.16,10164.3563482885,0.794480757931845,"South Asia","Colombo","79.8528","6.92148","Lower middle income","Blend",53.88
+"112","LTU","LT","Lithuania",2012,35.15,24475.0507509952,4.62950967158482,"Europe & Central Asia (all income levels)","Vilnius","25.2799","54.6896","Upper middle income","Not classified",61.26
+"113","LUX","LU","Luxembourg",2012,34.79,90788.2865762064,20.0842194874808,"Europe & Central Asia (all income levels)","Luxembourg","6.1296","49.61","High income: OECD","Not classified",83.29
+"114","LVA","LV","Latvia",2012,35.48,21122.2982149326,3.47174754795094,"Europe & Central Asia (all income levels)","Riga","24.1048","56.9465","Upper middle income","Not classified",64.05
+"118","MDA","MD","Moldova",2012,29.16,4226.95918930562,1.38355238446543,"Europe & Central Asia (all income levels)","Chisinau","28.8497","47.0167","Lower middle income","IDA",53.36
+"119","MDG","MG","Madagascar",2012,42.65,1399.5143248094,0.119581164561141,"Sub-Saharan Africa (all income levels)","Antananarivo","45.7167","-20.4667","Low income","IDA",26.7
+"121","MEX","MX","Mexico",2012,48.07,16289.5652780893,3.9393729203234,"Latin America & Caribbean (all income levels)","Mexico City","-99.1276","19.427","Upper middle income","IBRD",55.03
+"127","MNE","ME","Montenegro",2012,32.18,13812.695943286,3.76389822124038,"Europe & Central Asia (all income levels)","Podgorica","19.2595","42.4602","Upper middle income","IBRD",55.52
+"128","MNG","MN","Mongolia",2012,33.75,9990.03804907011,11.6538548230823,"East Asia & Pacific (all income levels)","Ulaanbaatar","106.937","47.9129","Lower middle income","IDA",44.67
+"132","MUS","MU","Mauritius",2012,35.84,16961.1109505936,3.24104493893535,"Sub-Saharan Africa (all income levels)","Port Louis","57.4977","-20.1605","Upper middle income","IBRD",58.09
+"140","NLD","NL","Netherlands",2012,27.99,46448.884799242,10.1091682571408,"Europe & Central Asia (all income levels)","Amsterdam","4.89095","52.3738","High income: OECD","Not classified",77.75
+"141","NOR","NO","Norway",2012,25.9,65399.836084667,9.94098023481974,"Europe & Central Asia (all income levels)","Oslo","10.7387","59.9138","High income: OECD","Not classified",78.04
+"146","PAN","PA","Panama",2012,51.9,18663.1681828035,2.69361479004669,"Latin America & Caribbean (all income levels)","Panama City","-79.5188","8.99427","Upper middle income","IBRD",56.84
+"147","PER","PE","Peru",2012,45.11,11051.2537713681,1.80779785168943,"Latin America & Caribbean (all income levels)","Lima","-77.0465","-12.0931","Upper middle income","IBRD",45.05
+"148","PHL","PH","Philippines",2012,43.04,6153.07044864692,0.951071109856615,"East Asia & Pacific (all income levels)","Manila","121.035","14.5515","Lower middle income","IBRD",44.02
+"151","POL","PL","Poland",2012,32.39,23598.5592763806,7.88060078242576,"Europe & Central Asia (all income levels)","Warsaw","21.02","52.26","High income: OECD","IBRD",69.53
+"153","PRT","PT","Portugal",2012,36.04,27125.1544347714,4.38058681612395,"Europe & Central Asia (all income levels)","Lisbon","-9.13552","38.7072","High income: OECD","Not classified",75.8
+"154","PRY","PY","Paraguay",2012,48.17,7447.17472643709,0.816273360043216,"Latin America & Caribbean (all income levels)","Asuncion","-57.6362","-25.3005","Lower middle income","IBRD",39.25
+"158","ROU","RO","Romania",2012,34.88,18910.2782731779,4.07431545512808,"Europe & Central Asia (all income levels)","Bucharest","26.0979","44.4479","Upper middle income","IBRD",50.52
+"159","RUS","RU","Russian Federation",2012,41.59,25316.6357856942,12.8183452615457,"Europe & Central Asia (all income levels)","Moscow","37.6176","55.7558","Upper middle income","IBRD",53.45
+"167","SLV","SV","El Salvador",2012,41.8,7859.86073025114,1.18544874677899,"Latin America & Caribbean (all income levels)","San Salvador","-89.2073","13.7034","Lower middle income","IBRD",43.79
+"173","SVK","SK","Slovak Republic",2012,26.12,26091.2798285454,6.05902290100616,"Europe & Central Asia (all income levels)","Bratislava","17.1073","48.1484","High income: OECD","Not classified",74.45
+"174","SVN","SI","Slovenia",2012,25.59,28481.751314373,7.25678326274245,"Europe & Central Asia (all income levels)","Ljubljana","14.5044","46.0546","High income: OECD","Not classified",76.43
+"175","SWE","SE","Sweden",2012,27.32,44433.7266901677,4.94230082776452,"Europe & Central Asia (all income levels)","Stockholm","18.0645","59.3327","High income: OECD","Not classified",78.09
+"182","THA","TH","Thailand",2012,39.26,14853.3296826122,4.54443085915056,"East Asia & Pacific (all income levels)","Bangkok","100.521","13.7308","Upper middle income","IBRD",52.83
+"183","TJK","TJ","Tajikistan",2012,30.52,2386.32747375318,0.385151726865793,"Europe & Central Asia (all income levels)","Dushanbe","68.7864","38.5878","Low income","IDA",31.34
+"189","TUR","TR","Turkey",2012,40.17,18449.250016041,4.40299537254827,"Europe & Central Asia (all income levels)","Ankara","32.3606","39.7153","Upper middle income","IBRD",54.91
+"192","UGA","UG","Uganda",2012,41.01,1696.49442433506,0.115394532638129,"Sub-Saharan Africa (all income levels)","Kampala","32.5729","0.314269","Low income","IDA",39.18
+"193","UKR","UA","Ukraine",2012,24.74,8472.20112920609,6.48720066325535,"Europe & Central Asia (all income levels)","Kiev","30.5038","50.4536","Lower middle income","IBRD",49.01
+"194","URY","UY","Uruguay",2012,41.32,18817.8749217256,2.55963768928739,"Latin America & Caribbean (all income levels)","Montevideo","-56.0675","-34.8941","Upper middle income","IBRD",53.61
+"200","VNM","VN","Vietnam",2012,38.7,5000.76485438209,1.78169660350504,"East Asia & Pacific (all income levels)","Hanoi","105.825","21.0069","Lower middle income","Blend",38.17
