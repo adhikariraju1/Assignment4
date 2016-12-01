@@ -36,7 +36,19 @@ EPImap <- gvisGeoChart(Combined2010, locationvar = 'iso2c',
                       options = list(
                           colors = "['red', 'yellow']"
                           ))
+
+labels <- c('Gini Coefficient', 'GDP Per Capita (PPP)', '(Intecept)')
+
 m1 <- lm(EPI.2012 ~ GINI, Combined2012)
+
+m2 <- lm(EPI.2012 ~ GINI + GDPPerCapPPP, Combined2012)
+
+m3 <- lm(EPIValue ~ GiniCoeff + GDPperCapPPP, Combined)
+
+m4 <- plm(EPIValue ~ GiniCoeff + GDPperCapPPP, data=Combined, index= c('country', 'year'), model = 'within')
+
+m5 <- plm(EPIValue ~ GiniCoeff + GDPperCapPPP, data=Combined, index= c('country', 'year'), model = 'random')
+
 
 ```
 
@@ -98,14 +110,24 @@ plot_ly(Combined2012, x = ~EPI.2012, y = ~GINI,
         mode = 'markers')
 ```
 
-## Inferential statistics
+## Inferential statistics {.flexbox .vcenter}
 
-```{r regression}
-summary(m1)
+```{r regression1, results='asis'}
+stargazer(m1, m2, type='html', covariate.labels = labels, 
+          title = 'Effect of Income Inequality on EPI', font.size = 'scriptsize')
 ```
-## Robustness
 
-```{r robust}
-plot(pressure)
+## Inferential statistics(contd.) {.flexbox .vcenter}
+
+```{r regression2, results='asis'}
+stargazer(m3, m4, m5, type='html', covariate.labels = labels, 
+          title = 'Effect of Income Inequality on EPI', font.size = 'scriptsize')
 ```
+
+## Inferential statistics(contd.) {.flexbox .vcenter}
+
+```{r hausman}
+phtest(m4, m5)
+```
+
 
