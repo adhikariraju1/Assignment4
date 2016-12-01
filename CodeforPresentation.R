@@ -1,4 +1,3 @@
-setwd('C:/RajuPC/CollaborativeSSDA/Assignments/Assignment4')
 library(WDI)
 library(countrycode)
 library(rio)
@@ -8,6 +7,10 @@ library(tidyr)
 library(plotly)
 library(rJava)
 library(xlsx)
+library(repmis)
+
+possible_dir <- c('C:/RajuPC/CollaborativeSSDA/Assignments/Assignment4', '/Users/mariorodriguez/Desktop/Assignment4')
+repmis::set_valid_wd(possible_dir)
 
 GINI <- WDI(country = 'all', start = '2002', end = '2012', indicator = c('SI.POV.GINI', 'NY.GDP.PCAP.PP.CD', 'EN.ATM.CO2E.PC'), extra = TRUE)
 
