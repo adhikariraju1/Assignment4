@@ -1,7 +1,7 @@
 ---
 title: "Income Inequality and Environmental Performance"
 author: "Raju Adhikari and Mario Rodriguez"
-date: "1/12/2016"
+date: "2/12/2016"
 output: ioslides_presentation
 ---
 
@@ -24,13 +24,20 @@ Combined <- read.csv('EPIGINI.csv')
 
 Combined2012 <- read.csv('EPIGINI2012.csv')
 
-GINIMAP2012 <- Combined2012[, c('iso2c','GINI')]
+Combined2010 <- read.csv('EPIGINI2010.csv')
 
-GINImap <- gvisGeoChart(GINIMAP2012, locationvar = 'iso2c',
+GINImap <- gvisGeoChart(Combined2010, locationvar = 'iso2c',
                       colorvar = 'GINI',
                       options = list(
-                          colors = "['#fff7bc', '#d95f0e']"
+                          colors = "['lightblue', 'blue']"
                           ))
+EPImap <- gvisGeoChart(Combined2010, locationvar = 'iso2c',
+                      colorvar = 'EPI.2010',
+                      options = list(
+                          colors = "['red', 'yellow']"
+                          ))
+m1 <- lm(EPI.2012 ~ GINI, Combined2012)
+
 ```
 
 ## Table of contents
@@ -79,6 +86,11 @@ Does income inequality of a country affect its Environment Performance Index? If
 print(GINImap, tag = 'chart')
 ```
 
+## EPI Map {.flexbox .vcenter}
+
+```{r descriptive 3, results='asis'}
+print(EPImap, tag = 'chart')
+```
 ## Plot  {.flexbox .vcenter}
 
 ```{r descriptive, echo = FALSE, results='asis', message = FALSE, warning = FALSE}
@@ -88,6 +100,9 @@ plot_ly(Combined2012, x = ~EPI.2012, y = ~GINI,
 
 ## Inferential statistics
 
+```{r regression}
+summary(m1)
+```
 ## Robustness
 
 ```{r robust}
