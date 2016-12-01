@@ -110,21 +110,21 @@ plot_ly(Combined2012, x = ~EPI.2012, y = ~GINI,
         mode = 'markers')
 ```
 
-## Inferential statistics {.flexbox .vcenter}
+## Inferential statistics {.flexbox .vcenter .smaller}
 
 ```{r regression1, results='asis'}
-stargazer(m1, m2, type='html', covariate.labels = labels, 
-          title = 'Effect of Income Inequality on EPI', font.size = 'scriptsize')
+stargazer::stargazer(m1, m2, type='html', covariate.labels = labels, 
+          title = 'Effect of Income Inequality on EPI', font.size = 'tiny')
 ```
 
-## Inferential statistics(contd.) {.flexbox .vcenter}
+## Inferential statistics(contd.) {.flexbox .vcenter .smaller}
 
 ```{r regression2, results='asis'}
-stargazer(m3, m4, m5, type='html', covariate.labels = labels, 
-          title = 'Effect of Income Inequality on EPI', font.size = 'scriptsize')
+stargazer::stargazer(m3, m4, m5, type='html', covariate.labels = labels, digits = 2, 
+          title = 'Effect of Income Inequality on EPI', font.size = 'normalsize')
 ```
 
-## Inferential statistics(contd.) {.flexbox .vcenter}
+## Inferential statistics(contd.)
 
 ```{r hausman}
 phtest(m4, m5)
