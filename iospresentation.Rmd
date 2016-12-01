@@ -1,0 +1,96 @@
+---
+title: "Income Inequality and Environmental Performance"
+author: "Raju Adhikari and Mario Rodriguez"
+date: "1/12/2016"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(WDI)
+library(countrycode)
+library(rio)
+library(stargazer)
+library(ggplot2)
+library(tidyr)
+library(plotly)
+library(plm)
+library(googleVis)
+
+possible_dir <- c('C:/RajuPC/CollaborativeSSDA/Assignments/Assignment4', '/Users/mariorodriguez/Desktop/Assignment4')
+repmis::set_valid_wd(possible_dir)
+
+Combined <- read.csv('EPIGINI.csv')
+
+Combined2012 <- read.csv('EPIGINI2012.csv')
+
+GINIMAP2012 <- Combined2012[, c('iso2c','GINI')]
+
+GINImap <- gvisGeoChart(GINIMAP2012, locationvar = 'iso2c',
+                      colorvar = 'GINI',
+                      options = list(
+                          colors = "['#fff7bc', '#d95f0e']"
+                          ))
+```
+
+## Table of contents
+
+- Research Question
+- Theoretical Basis
+- Operationalization
+- Plots, Maps and other Descriptive Statistics
+- Regression and Other Inferential Statistics
+- Conclusion
+
+## Research question
+
+Unrefined Question:
+
+Does income inequality have an effect on the environment?
+
+Refined Question:
+
+Does income inequality of a country affect its Environment Performance Index? If so, How?
+
+## Theoretical premise
+
+- Carbon emission and equal countries
+- Economic Development and unequal countries
+- Environment Performance Index
+
+## Operationalization
+
+- Explanatory Variable: 
+    - Gini coefficient (measure of income inequality)
+    - Source: World Bank's API
+- Dependent Variable: 
+    - EPI (measure of environment performance)
+    - Source: Yale Center for Environmental Law and Policy
+- Data Cleaning:
+    - Excel File, Yearly data separated by sheets 
+    - Columns included items used to calculate EPI
+    - Merge the data-sets
+- Control Variables:
+    - GDP per capita
+
+## GINI Map {.flexbox .vcenter}
+
+```{r descriptive 2, results='asis'}
+print(GINImap, tag = 'chart')
+```
+
+## Plot  {.flexbox .vcenter}
+
+```{r descriptive, echo = FALSE, results='asis', message = FALSE, warning = FALSE}
+plot_ly(Combined2012, x = ~EPI.2012, y = ~GINI,
+        mode = 'markers')
+```
+
+## Inferential statistics
+
+## Robustness
+
+```{r robust}
+plot(pressure)
+```
+
