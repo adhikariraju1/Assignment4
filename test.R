@@ -40,6 +40,15 @@ m4 <- plm(EPIValue ~ GiniCoeff + GDPperCapPPP, data=combined, index= c('country'
 
 summary(m4)
 
+#Random Effects now.
+
+m5 <- plm(EPIValue ~ GiniCoeff + GDPperCapPPP, data=combined, index= c('country', 'year'), model = 'random')
+
+summary(m5)
+
+#Check between fixed effects or random effects.
+phtest(m4, m5)
+
 
 
 #### A simple regression shows that it is statistically significant and is in the direction that we wanted. Even when controlling for GDP per capita with Purchasing Power Parity, the problem is that the coefficients decrease a lot because the variable is in USD, maybe we can introduce a dummy by category
