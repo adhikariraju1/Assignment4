@@ -1,4 +1,3 @@
-setwd('C:/RajuPC/CollaborativeSSDA/Assignments/Assignment4')
 library(WDI)
 library(countrycode)
 library(rio)
@@ -7,6 +6,9 @@ library(ggplot2)
 library(tidyr)
 library(plotly)
 library(plm)
+
+possible_dir <- c('C:/RajuPC/CollaborativeSSDA/Assignments/Assignment4', '/Users/mariorodriguez/Desktop/Assignment4')
+repmis::set_valid_wd(possible_dir)
 
 Combined <- read.csv('EPIGINI.csv')
 
@@ -30,19 +32,19 @@ m2 <- lm(EPI.2012 ~ GINI + GDPPerCapPPP, Combined2012)
 summary(m2)
 
 #Pooled OLS on the dataset combined.
-m3 <- lm(EPIValue ~ GiniCoeff + GDPperCapPPP, combined)
+m3 <- lm(EPIValue ~ GiniCoeff + GDPperCapPPP, Combined)
 
 summary(m3)
 
 #Fixed Effects on the same dataset.
 
-m4 <- plm(EPIValue ~ GiniCoeff + GDPperCapPPP, data=combined, index= c('country', 'year'), model = 'within')
+m4 <- plm(EPIValue ~ GiniCoeff + GDPperCapPPP, data=Combined, index= c('country', 'year'), model = 'within')
 
 summary(m4)
 
 #Random Effects now.
 
-m5 <- plm(EPIValue ~ GiniCoeff + GDPperCapPPP, data=combined, index= c('country', 'year'), model = 'random')
+m5 <- plm(EPIValue ~ GiniCoeff + GDPperCapPPP, data=Combined, index= c('country', 'year'), model = 'random')
 
 summary(m5)
 

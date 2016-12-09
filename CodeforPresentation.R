@@ -108,5 +108,24 @@ m2 <- lm(EPI.2012 ~ GINI + GDPPerCapPPP, Combined2012)
 
 summary(m2)
 
-#### A simple regression shows that it is statistically significant and is in the direction that we wanted. Even when controlling for GDP per capita with Purchasing Power Parity, the problem is that the coefficients decrease a lot because the variable is in USD, maybe we can introduce a dummy by category
+#### Data from 2010, the last year with the US' GINI
+
+GINI2010 <- WDI(country = 'all', start = '2010', end = '2010', indicator = c('SI.POV.GINI', 'NY.GDP.PCAP.PP.CD', 'EN.ATM.CO2E.PC'), extra = TRUE)
+
+names(EPI2010)[names(EPI2010)=="iso"] <- "iso3c"
+
+
+names(GINI2010)[names(GINI2010)=="SI.POV.GINI"] <- "GINI"
+names(GINI2010)[names(GINI2010)=="NY.GDP.PCAP.PP.CD"] <- "GDPPerCapPPP"
+names(GINI2010)[names(GINI2010)=="EN.ATM.CO2E.PC"] <- "CO2EmPerCap"
+
+
+Combined2010 <- merge(GINI2010, EPI2010, by = c('iso3c'))
+
+Combined2010 <- Combined2010[complete.cases(Combined2010),]
+
+Combined2010$EPI.2010 <- as.numeric(as.character(Combined2010$EPI.2010))
+
+write.csv(Combined2010, file = "EPIGINI2010.csv")
+
 
