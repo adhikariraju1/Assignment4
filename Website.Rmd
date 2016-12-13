@@ -1,0 +1,93 @@
+---
+title: "Does income inequality reduce environmental performance?"
+author: "Raju Adhikari and Mario Alonso Rodriguez"
+date: "9/12/2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(WDI)
+library(countrycode)
+library(rio)
+library(stargazer)
+library(ggplot2)
+library(tidyr)
+library(plotly)
+library(plm)
+library(googleVis)
+library(repmis)
+library(magrittr)
+
+possible_dir <- c('C:/RajuPC/CollaborativeSSDA/Assignments/Assignment4', '/Users/mariorodriguez/Desktop/Assignment4')
+repmis::set_valid_wd(possible_dir)
+
+Combinedmaps <- read.csv('Maps.csv')
+
+Combined <- read.csv('EPIGINI.csv')
+
+Combined2012 <- read.csv('EPIGINI2012.csv')
+
+EPI2016 <- read.csv('EPI2016.csv')
+
+GINImap <- gvisGeoChart(Combinedmaps, locationvar = 'iso2c',
+                        colorvar = 'Gini', hovervar = 'year',
+                        options = list(
+                          colors = "['lightblue', 'blue']"
+                        ))
+
+EPImap <- gvisGeoChart(Combinedmaps, locationvar = 'iso2c',
+                       colorvar = 'EPI', hovervar = 'year',
+                       options = list(
+                         colors = "['red', 'yellow']"
+                       ))
+
+CO2map <- gvisGeoChart(Combinedmaps, locationvar = 'iso2c',
+                       colorvar = 'CO2emissions', hovervar = 'year',
+                       options = list(
+                         colors = "['white', 'black']"
+                       ))
+
+ax <- list(
+  title = "Country",
+  zeroline = FALSE,
+  showline = FALSE,
+  showticklabels = FALSE,
+  showgrid = FALSE
+)
+```
+
+## GINI 
+
+This is a test to see if the map is more complete this time
+
+```{r GINImap, results='asis', echo=FALSE}
+print(GINImap, tag = 'chart')
+```
+
+## EPI
+
+This is a test of the 
+
+```{r EPI, results='asis', echo=FALSE}
+print(EPImap, tag = 'chart')
+```
+
+## CO2 
+
+Check the emissions
+
+```{r CO2map, results='asis', echo=FALSE}
+print(CO2map, tag = 'chart')
+```
+
+## Bar chart of EPI
+
+Here we will show that there are differences between levels of income on Environmental Performance
+
+```{r Bar, results='asis', echo=FALSE}
+plot_ly(EPI2016, x = ~country, y = ~EPI2016, type = 'bar', name = 'EPI') %>%
+layout(xaxis = ax)
+```
+
+There is a space over here
