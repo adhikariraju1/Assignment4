@@ -124,6 +124,127 @@ $(document).ready(function () {
 </div>
 
 
+<div id="commands" class="section level2">
+<h2>Commands</h2>
+<pre class="r"><code>knitr::opts_chunk$set(echo = TRUE)
+library(WDI)</code></pre>
+<pre><code>## Warning: package 'WDI' was built under R version 3.3.2</code></pre>
+<pre><code>## Loading required package: RJSONIO</code></pre>
+<pre><code>## Warning: package 'RJSONIO' was built under R version 3.3.2</code></pre>
+<pre class="r"><code>library(countrycode)</code></pre>
+<pre><code>## Warning: package 'countrycode' was built under R version 3.3.2</code></pre>
+<pre class="r"><code>library(rio)</code></pre>
+<pre><code>## Warning: package 'rio' was built under R version 3.3.2</code></pre>
+<pre class="r"><code>library(stargazer)</code></pre>
+<pre><code>## Warning: package 'stargazer' was built under R version 3.3.2</code></pre>
+<pre><code>## 
+## Please cite as:</code></pre>
+<pre><code>##  Hlavac, Marek (2015). stargazer: Well-Formatted Regression and Summary Statistics Tables.</code></pre>
+<pre><code>##  R package version 5.2. http://CRAN.R-project.org/package=stargazer</code></pre>
+<pre class="r"><code>library(ggplot2)</code></pre>
+<pre><code>## Warning: package 'ggplot2' was built under R version 3.3.2</code></pre>
+<pre class="r"><code>library(tidyr)</code></pre>
+<pre><code>## Warning: package 'tidyr' was built under R version 3.3.2</code></pre>
+<pre class="r"><code>library(plotly)</code></pre>
+<pre><code>## Warning: package 'plotly' was built under R version 3.3.2</code></pre>
+<pre><code>## 
+## Attaching package: 'plotly'</code></pre>
+<pre><code>## The following object is masked from 'package:ggplot2':
+## 
+##     last_plot</code></pre>
+<pre><code>## The following object is masked from 'package:rio':
+## 
+##     export</code></pre>
+<pre><code>## The following object is masked from 'package:stats':
+## 
+##     filter</code></pre>
+<pre><code>## The following object is masked from 'package:graphics':
+## 
+##     layout</code></pre>
+<pre class="r"><code>library(plm)</code></pre>
+<pre><code>## Warning: package 'plm' was built under R version 3.3.2</code></pre>
+<pre><code>## Loading required package: Formula</code></pre>
+<pre><code>## Warning: package 'Formula' was built under R version 3.3.2</code></pre>
+<pre class="r"><code>library(googleVis)</code></pre>
+<pre><code>## Warning: package 'googleVis' was built under R version 3.3.2</code></pre>
+<pre><code>## 
+## Welcome to googleVis version 0.6.1
+## 
+## Please read the Google API Terms of Use
+## before you start using the package:
+## https://developers.google.com/terms/
+## 
+## Note, the plot method of googleVis will by default use
+## the standard browser to display its output.
+## 
+## See the googleVis package vignettes for more details,
+## or visit http://github.com/mages/googleVis.
+## 
+## To suppress this message use:
+## suppressPackageStartupMessages(library(googleVis))</code></pre>
+<pre class="r"><code>possible_dir &lt;- c('C:/RajuPC/CollaborativeSSDA/Assignments/Assignment4', '/Users/mariorodriguez/Desktop/Assignment4')
+repmis::set_valid_wd(possible_dir)</code></pre>
+<pre><code>## Working directory set to: C:/RajuPC/CollaborativeSSDA/Assignments/Assignment4</code></pre>
+<pre class="r"><code>Combined &lt;- read.csv('EPIGINI.csv')
+
+Combined2012 &lt;- read.csv('EPIGINI2012.csv')
+
+Combined2010 &lt;- read.csv('EPIGINI2010.csv')
+
+Combined2016 &lt;- read.csv('EPIGINI2016.csv')
+
+GINImap &lt;- gvisGeoChart(Combined2010, locationvar = 'iso2c',
+                      colorvar = 'GINI',
+                      options = list(
+                          colors = &quot;['lightblue', 'blue']&quot;
+                          ))
+EPImap &lt;- gvisGeoChart(Combined2010, locationvar = 'iso2c',
+                      colorvar = 'EPI.2010',
+                      options = list(
+                          colors = &quot;['red', 'yellow']&quot;
+                          ))
+
+labels &lt;- c('Gini Coefficient', 'GDP Per Capita (PPP)', '(Intecept)')
+
+m1 &lt;- lm(EPI.2012 ~ GINI, Combined2012)
+
+m2 &lt;- lm(EPI.2012 ~ GINI + GDPPerCapPPP, Combined2012)
+
+m3 &lt;- lm(EPIValue ~ GiniCoeff + GDPperCapPPP, Combined)
+
+m4 &lt;- lm(EPI ~ Gini + GDPperCapPPP + PopulationDens + UrbanPop, Combined2016)
+
+stargazer(m4, type='html')</code></pre>
+<pre><code>## 
+## &lt;table style=&quot;text-align:center&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot; style=&quot;border-bottom: 1px solid black&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;em&gt;Dependent variable:&lt;/em&gt;&lt;/td&gt;&lt;/tr&gt;
+## &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td colspan=&quot;1&quot; style=&quot;border-bottom: 1px solid black&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+## &lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;&lt;td&gt;EPI&lt;/td&gt;&lt;/tr&gt;
+## &lt;tr&gt;&lt;td colspan=&quot;2&quot; style=&quot;border-bottom: 1px solid black&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;Gini&lt;/td&gt;&lt;td&gt;-0.316&lt;sup&gt;***&lt;/sup&gt;&lt;/td&gt;&lt;/tr&gt;
+## &lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;&lt;td&gt;(0.037)&lt;/td&gt;&lt;/tr&gt;
+## &lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+## &lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;GDPperCapPPP&lt;/td&gt;&lt;td&gt;0.001&lt;sup&gt;***&lt;/sup&gt;&lt;/td&gt;&lt;/tr&gt;
+## &lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;&lt;td&gt;(0.00003)&lt;/td&gt;&lt;/tr&gt;
+## &lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+## &lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;PopulationDens&lt;/td&gt;&lt;td&gt;-0.002&lt;/td&gt;&lt;/tr&gt;
+## &lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;&lt;td&gt;(0.003)&lt;/td&gt;&lt;/tr&gt;
+## &lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+## &lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;UrbanPop&lt;/td&gt;&lt;td&gt;0.215&lt;sup&gt;***&lt;/sup&gt;&lt;/td&gt;&lt;/tr&gt;
+## &lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;&lt;td&gt;(0.021)&lt;/td&gt;&lt;/tr&gt;
+## &lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+## &lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;Constant&lt;/td&gt;&lt;td&gt;45.857&lt;sup&gt;***&lt;/sup&gt;&lt;/td&gt;&lt;/tr&gt;
+## &lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;&lt;td&gt;(1.804)&lt;/td&gt;&lt;/tr&gt;
+## &lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+## &lt;tr&gt;&lt;td colspan=&quot;2&quot; style=&quot;border-bottom: 1px solid black&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;Observations&lt;/td&gt;&lt;td&gt;700&lt;/td&gt;&lt;/tr&gt;
+## &lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;R&lt;sup&gt;2&lt;/sup&gt;&lt;/td&gt;&lt;td&gt;0.731&lt;/td&gt;&lt;/tr&gt;
+## &lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;Adjusted R&lt;sup&gt;2&lt;/sup&gt;&lt;/td&gt;&lt;td&gt;0.729&lt;/td&gt;&lt;/tr&gt;
+## &lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;Residual Std. Error&lt;/td&gt;&lt;td&gt;8.037 (df = 695)&lt;/td&gt;&lt;/tr&gt;
+## &lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;F Statistic&lt;/td&gt;&lt;td&gt;471.795&lt;sup&gt;***&lt;/sup&gt; (df = 4; 695)&lt;/td&gt;&lt;/tr&gt;
+## &lt;tr&gt;&lt;td colspan=&quot;2&quot; style=&quot;border-bottom: 1px solid black&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;Note:&lt;/em&gt;&lt;/td&gt;&lt;td style=&quot;text-align:right&quot;&gt;&lt;sup&gt;*&lt;/sup&gt;p&lt;0.1; &lt;sup&gt;**&lt;/sup&gt;p&lt;0.05; &lt;sup&gt;***&lt;/sup&gt;p&lt;0.01&lt;/td&gt;&lt;/tr&gt;
+## &lt;/table&gt;</code></pre>
+<pre class="r"><code>m5 &lt;- plm(EPIValue ~ GiniCoeff + GDPperCapPPP, data=Combined, index= c('country', 'year'), model = 'within')
+
+m6 &lt;- plm(EPIValue ~ GiniCoeff + GDPperCapPPP, data=Combined, index= c('country', 'year'), model = 'random')</code></pre>
+</div>
 <div id="abstract" class="section level2">
 <h2>Abstract</h2>
 <p>Abstract goes here.</p>

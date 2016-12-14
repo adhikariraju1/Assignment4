@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Commands
-```{r setup, include=FALSE}
+```{r commands, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 library(WDI)
 library(countrycode)
@@ -31,6 +31,8 @@ Combined2012 <- read.csv('EPIGINI2012.csv')
 
 Combined2010 <- read.csv('EPIGINI2010.csv')
 
+Combined2016 <- read.csv('EPIGINI2016.csv')
+
 GINImap <- gvisGeoChart(Combined2010, locationvar = 'iso2c',
                       colorvar = 'GINI',
                       options = list(
@@ -50,9 +52,12 @@ m2 <- lm(EPI.2012 ~ GINI + GDPPerCapPPP, Combined2012)
 
 m3 <- lm(EPIValue ~ GiniCoeff + GDPperCapPPP, Combined)
 
-m4 <- plm(EPIValue ~ GiniCoeff + GDPperCapPPP, data=Combined, index= c('country', 'year'), model = 'within')
+m4 <- lm(EPI ~ Gini + GDPperCapPPP + PopulationDens + UrbanPop, Combined2016)
+summary(m4)
 
-m5 <- plm(EPIValue ~ GiniCoeff + GDPperCapPPP, data=Combined, index= c('country', 'year'), model = 'random')
+m5 <- plm(EPIValue ~ GiniCoeff + GDPperCapPPP, data=Combined, index= c('country', 'year'), model = 'within')
+
+m6 <- plm(EPIValue ~ GiniCoeff + GDPperCapPPP, data=Combined, index= c('country', 'year'), model = 'random')
 
 ```
 
