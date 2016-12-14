@@ -54,3 +54,8 @@ names(Combinedmaps)[names(Combinedmaps)=="EPIValue"] <- "EPI"
 write.csv(Combinedmaps, 'Maps.csv')
 
 sapply(Combinedmaps, class)
+
+## http://scholarworks.umass.edu/cgi/viewcontent.cgi?article=1039&context=peri_workingpapers
+
+## http://www.un.org/esa/desa/papers/2015/wp145_2015.pdf
+
