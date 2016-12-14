@@ -9,6 +9,54 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## Commands
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(WDI)
+library(countrycode)
+library(rio)
+library(stargazer)
+library(ggplot2)
+library(tidyr)
+library(plotly)
+library(plm)
+library(googleVis)
+
+possible_dir <- c('C:/RajuPC/CollaborativeSSDA/Assignments/Assignment4', '/Users/mariorodriguez/Desktop/Assignment4')
+repmis::set_valid_wd(possible_dir)
+
+Combined <- read.csv('EPIGINI.csv')
+
+Combined2012 <- read.csv('EPIGINI2012.csv')
+
+Combined2010 <- read.csv('EPIGINI2010.csv')
+
+GINImap <- gvisGeoChart(Combined2010, locationvar = 'iso2c',
+                      colorvar = 'GINI',
+                      options = list(
+                          colors = "['lightblue', 'blue']"
+                          ))
+EPImap <- gvisGeoChart(Combined2010, locationvar = 'iso2c',
+                      colorvar = 'EPI.2010',
+                      options = list(
+                          colors = "['red', 'yellow']"
+                          ))
+
+labels <- c('Gini Coefficient', 'GDP Per Capita (PPP)', '(Intecept)')
+
+m1 <- lm(EPI.2012 ~ GINI, Combined2012)
+
+m2 <- lm(EPI.2012 ~ GINI + GDPPerCapPPP, Combined2012)
+
+m3 <- lm(EPIValue ~ GiniCoeff + GDPperCapPPP, Combined)
+
+m4 <- plm(EPIValue ~ GiniCoeff + GDPperCapPPP, data=Combined, index= c('country', 'year'), model = 'within')
+
+m5 <- plm(EPIValue ~ GiniCoeff + GDPperCapPPP, data=Combined, index= c('country', 'year'), model = 'random')
+
+```
+
+
 ## Abstract
 
 Abstract goes here.
