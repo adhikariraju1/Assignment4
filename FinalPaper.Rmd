@@ -94,8 +94,8 @@ Air Quality(33%)          | Agriculture (10%)
 Water and Sanitation (33%)| Forests (10%)            
                           | Fisheries (5%)           
                           | Biodiversity and Habitat (25%)
-                          | Climate and energy (25%) 
-  
+                          | Climate and energy (25%)  
+
 In its 15th year, the EPI report for 2016 was launched at the World Economic Forum. The organizers declared that the Index is more relevant than ever to achieving the United Nations' Sustainable Development Goals and carrying out the Paris Agreement.
 
 # Literature Review: Interconnectedness between Inequality and Environment
@@ -104,9 +104,9 @@ A few scholars have already connected the dots and analyzed the relationship bet
 
 # Methodology
 
-We have used quantitative analysis using R programming to test the hypothesis. The descriptive and inferential statistical measures used in the paper are showcased using tables, plots, graphs and maps, all of which are made using R. The results obtained from quantitative analysis is meticulously coupled with qualitative literature review that consisted of scholarly articles and reports by experts of the fields. We have analyzed scholarly sources that have influenced the discussion on the relationship between inequality and environment. 
+We have used quantitative analysis using R programming to test the hypothesis. The descriptive and inferential statistical measures used in the paper are showcased using regression tables, plots, graphs and maps, all of which are made using R. The results obtained from quantitative analysis is meticulously coupled with qualitative literature review that consisted of scholarly articles and reports by experts of the fields. We have analyzed scholarly sources that have influenced the discussion on the relationship between inequality and environment. 
 
-To do a statistical analysis of the issue, it is extremely important to locate data sources. The World Bank Database has all the indicators necessary to do a thorough analysis of the topic. Some of the indicators used to carry out the research were: Gini Coefficient, Environment Performance Index, GDP per Capita Purchasing Power Parity, and Population Density. The date was extracted from the World Bank API, and ........... Since the data were obtained from multiple sources, they had to be cleaned and merged, which resulted in a panel dataset from years ... to .... Year-specific data was used to draw several maps and plots. However, for the inferential analysis using regression, the entire panel data with all the relevant dependent, independent, and control variables were used.  
+To do a statistical analysis of the issue, it is extremely important to locate data sources. The World Bank Database has most of the indicators necessary to do a thorough analysis of the topic. Some of the indicators used to carry out the research were: Gini Coefficient, Environment Performance Index, GDP per Capita Purchasing Power Parity, and Population Density. The data was extracted from the World Bank API, and Yale Center for Environmental Law & Policy. Since the data were obtained from multiple sources, they had to be cleaned and merged, which resulted in a panel dataset from years 2002 to 2014. Year-specific data was used to draw several maps and plots. However, for the inferential analysis using regression, the entire panel data with all the relevant dependent, independent, and control variables were used.  
 
 # Operationalization
 
@@ -114,9 +114,15 @@ Dependent Variable: The dependent variable for our research is Environment Perfo
 
 Explanatory Variable: The main independent (explanatory) variable used for our research is the Gini coefficient, written as _Gini_. Our dataframe consists of Gini for .... countries from 2002-2014. Due to the fact, that Gini is not measured every year by the respective countries, data for some of the years are missing.
 
-Control Variables:
+Control Variables: The first control variable is GDP per capita (PPP). It is written as _GDPperCapPPP_. Our dataframe consists of GDP per Capita (PPP) for .... countries from 2002-2014 and it was obtained from the World Bank API and merged into the dataframe that consisted EPI and Gini. The second control variable is Population Density and it is written as _PopulationDens_. Our dataframe conists of Population Density for .... countries from 2002-2014 and it was obtained from the World Bank API and merged into the dataframe that consisted EPI and Gini.  
 
-Hypothesis:
+Write more on the theoretical relevance of the chosen control variables....
+
+Research Question: Our research question is "Does income inequality affect the environment performance index?" Through this question, we are planning on analyzing the relationship between inequality and environment so that we can better understand the policy implication of these highly relevant areas.
+
+Regression Equation: The regression equation is written as follows:  
+            $EPI = \beta_0 + \beta_1(Gini) + \beta_2(GDPperCapPPP) + \beta_3(PopulationDens) + \epsilon$
+
 
 # Descriptive Analysis
 
