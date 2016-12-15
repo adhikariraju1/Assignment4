@@ -37,33 +37,68 @@ Combined2010 <- read.csv('EPIGINI2010.csv')
 
 Combined2014 <- read.csv('EPIGINI2014.csv')
 
-GINImap <- gvisGeoChart(Combined2010, locationvar = 'iso2c',
-                      colorvar = 'GINI',
-                      options = list(
+Combinedmaps <- read.csv('Maps.csv')
+
+### Changed the maps, now it will give you the latest available value for both Gini and EPI
+
+GINImap <- gvisGeoChart(Combinedmaps, locationvar = 'iso2c',
+                        colorvar = 'Gini', hovervar = 'year',
+                        options = list(
                           colors = "['lightblue', 'blue']"
-                          ))
-EPImap <- gvisGeoChart(Combined2010, locationvar = 'iso2c',
-                      colorvar = 'EPI.2010',
-                      options = list(
-                          colors = "['red', 'yellow']"
-                          ))
+                        ))
+
+EPImap <- gvisGeoChart(Combinedmaps, locationvar = 'iso2c',
+                       colorvar = 'EPI', hovervar = 'year',
+                       options = list(
+                         colors = "['red', 'yellow']"
+                       ))
 
 labels <- c('Gini Coefficient', 'GDP Per Capita (PPP)', '(Intecept)')
 
 m1 <- lm(EPI.2012 ~ GINI, Combined2012)
 
-m2 <- lm(EPI.2012 ~ GINI + GDPPerCapPPP, Combined2012)
+m2 <- lm(EPI.2012 ~ GINI + log(GDPPerCapPPP), Combined2012)
 
-m3 <- lm(EPIValue ~ GiniCoeff + GDPperCapPPP, Combined)
+m3 <- lm(EPIValue ~ GiniCoeff + log(GDPperCapPPP), Combined)
 
-m4 <- lm(EPI ~ Gini + GDPperCapPPP + PopulationDens, Combined2014)
+m4 <- lm(EPI ~ Gini + log(GDPperCapPPP) + PopulationDens, Combined2014)
 summary(m4)
 
-m5 <- plm(EPI ~ Gini + GDPperCapPPP + PopulationDens, data=Combined2014, index= c('country', 'year'), model = 'within')
+m5 <- plm(EPI ~ Gini + log(GDPperCapPPP) + PopulationDens, data=Combined2014, index= c('country', 'year'), model = 'within')
 summary(m5)
 
-m6 <- plm(EPI ~ Gini + GDPperCapPPP + PopulationDens, data=Combined2014, index= c('country', 'year'), model = 'random')
+m6 <- plm(EPI ~ Gini + log(GDPperCapPPP) + PopulationDens, data=Combined2014, index= c('country', 'year'), model = 'random')
 summary(m6)
+
+bptest(m5) ###It shows that there is heteroscedasticity
+
+### We test the coefficients to control the heteroscedasticity, all of them appear to maintain their statistical significance after the tests (the interpretation is here http://dss.princeton.edu/training/Panel101R.pdf)
+
+coeftest(m5) 
+
+coeftest(m5, vcovHC)
+
+coeftest(m5, vcovHC(m5, method = "arellano"))
+
+coeftest(m5, vcovHC(m5, type = "HC3")) 
+
+### We test for serial correlation (apparently we have serial correlation but I don't know how to control for it - maybe we don't include it)
+
+pbgtest(m5)
+
+#### Plot of simple regression with confidence intervals
+
+ggplot(Combined2012, aes(x=EPI.2012, y=GINI)) +
+    geom_point(shape=1) + 
+    geom_smooth(method=lm) 
+
+
+### This shows the mean value for each year, don't know if its of any use for us
+
+aggregate(EPI ~ year, Combined2014, mean)
+
+aggregate(Gini ~ year, Combined2014, mean)
+
 
 ```
 
