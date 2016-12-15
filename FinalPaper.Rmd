@@ -191,20 +191,13 @@ stargazer::stargazer(m4, m5, m6, type='latex', digits = 2, header = FALSE,
 
 # Robustness
 
-Checking serial correlation of the FE estimator:
+Checking serial correlation:
 ```{r serialcorrelation, results='asis'}
 pbgtest(m5)  
 ```
 
-```{r heteroscedasticity, results='asis'}
-bptest(EPI ~ Gini + factor(country), data = Combined2014, studentize=F)  
-```
-  
-  
-```{r correcting, results='asis'}
-coeftest(m5, vcovHC(m5, method = "arellano"))  
-```
- 
+
+
 
 
 # Final Analysis
