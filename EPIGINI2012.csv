@@ -1,72 +1,177 @@
 "","iso3c","iso2c","country","year","GINI","GDPPerCapPPP","CO2EmPerCap","region","capital","longitude","latitude","income","lending","EPI.2012"
+"2","AFG","AF","Afghanistan",2012,NA,1934.28563418865,0.688083612623934,"South Asia","Kabul","69.1761","34.5228","Low income","IDA",21.57
+"3","AGO","AO","Angola",2012,NA,6758.27804986574,1.4722550379024,"Sub-Saharan Africa (all income levels)","Luanda","13.242","-8.81155","Lower middle income","IDA",28.69
 "4","ALB","AL","Albania",2012,28.96,10361.433216136,1.62472196333623,"Europe & Central Asia (all income levels)","Tirane","19.8172","41.3317","Upper middle income","IBRD",54.73
+"6","ARE","AE","United Arab Emirates",2012,NA,61172.9947875255,19.2522228882032,"Middle East & North Africa (all income levels)","Abu Dhabi","54.3705","24.4764","High income: nonOECD","Not classified",72.91
 "7","ARG","AR","Argentina",2012,42.49,19686.6091339069,4.56963523938012,"Latin America & Caribbean (all income levels)","Buenos Aires","-58.4173","-34.6118","Upper middle income","IBRD",49.55
 "8","ARM","AM","Armenia",2012,30.48,7401.85639769464,1.91208959087599,"Europe & Central Asia (all income levels)","Yerevan","44.509","40.1596","Lower middle income","Blend",61.67
+"10","ATG","AG","Antigua and Barbuda",2012,NA,20956.336421157,5.88735699289315,"Latin America & Caribbean (all income levels)","Saint John's","-61.8456","17.1175","Upper middle income","IBRD",48.89
+"11","AUS","AU","Australia",2012,NA,42596.2941186879,16.5193857829994,"East Asia & Pacific (all income levels)","Canberra","149.129","-35.282","High income: OECD","Not classified",82.4
 "12","AUT","AT","Austria",2012,30.48,45858.2468363681,7.38403220122062,"Europe & Central Asia (all income levels)","Vienna","16.3798","48.2201","High income: OECD","Not classified",78.32
+"13","AZE","AZ","Azerbaijan",2012,NA,16180.8871503048,3.82487717012357,"Europe & Central Asia (all income levels)","Baku","49.8932","40.3834","Upper middle income","IBRD",55.47
+"14","BDI","BI","Burundi",2012,NA,730.033565596062,0.0278884875331026,"Sub-Saharan Africa (all income levels)","Bujumbura","29.3639","-3.3784","Low income","IDA",25.78
 "15","BEL","BE","Belgium",2012,27.59,41930.6618333441,8.28483788011157,"Europe & Central Asia (all income levels)","Brussels","4.36761","50.8371","High income: OECD","Not classified",66.61
+"16","BEN","BJ","Benin",2012,NA,1826.80893511019,0.548419410073363,"Sub-Saharan Africa (all income levels)","Porto-Novo","2.6323","6.4779","Low income","IDA",32.42
+"17","BFA","BF","Burkina Faso",2012,NA,1547.64937169723,0.15847559730798,"Sub-Saharan Africa (all income levels)","Ouagadougou","-1.53395","12.3605","Low income","IDA",40.52
+"18","BGD","BD","Bangladesh",2012,NA,2764.78192830626,0.434633966884938,"South Asia","Dhaka","90.4113","23.7055","Low income","IDA",25.61
 "19","BGR","BG","Bulgaria",2012,36.01,16097.8343137084,6.14204310276862,"Europe & Central Asia (all income levels)","Sofia","23.3238","42.7105","Upper middle income","IBRD",64.01
+"20","BHR","BH","Bahrain",2012,NA,40992.5567832413,21.8109970402909,"Middle East & North Africa (all income levels)","Manama","50.5354","26.1921","High income: nonOECD","Not classified",51.83
+"21","BHS","BS","Bahamas, The",2012,NA,23234.7922247687,5.15011493388616,"Latin America & Caribbean (all income levels)","Nassau","-77.339","25.0661","High income: nonOECD","Not classified",46.58
+"22","BIH","BA","Bosnia and Herzegovina",2012,NA,9705.01397901882,5.81406841832098,"Europe & Central Asia (all income levels)","Sarajevo","18.4214","43.8607","Upper middle income","Blend",45.79
 "23","BLR","BY","Belarus",2012,26.53,17218.3561003897,6.68034097633136,"Europe & Central Asia (all income levels)","Minsk","27.5766","53.9678","Upper middle income","IBRD",67.69
+"24","BLZ","BZ","Belize",2012,NA,8114.4437091069,1.42669145577609,"Latin America & Caribbean (all income levels)","Belmopan","-88.7713","17.2534","Lower middle income","IBRD",50.46
 "26","BOL","BO","Bolivia",2012,46.7,5899.78130262682,1.83551243792951,"Latin America & Caribbean (all income levels)","La Paz","-66.1936","-13.9908","Lower middle income","Blend",50.48
 "27","BRA","BR","Brazil",2012,52.67,15246.2607662872,2.32225814003511,"Latin America & Caribbean (all income levels)","Brasilia","-47.9292","-15.7801","Upper middle income","IBRD",52.97
+"28","BRB","BB","Barbados",2012,NA,15673.1733129577,5.22219973009447,"Latin America & Caribbean (all income levels)","Bridgetown","-59.6105","13.0935","High income: nonOECD","Not classified",45.5
+"29","BRN","BN","Brunei Darussalam",2012,NA,74195.021192084,23.8008838209473,"East Asia & Pacific (all income levels)","Bandar Seri Begawan","114.946","4.94199","High income: nonOECD","Not classified",66.49
 "30","BTN","BT","Bhutan",2012,38.81,7251.43319165982,1.09954135410126,"South Asia","Thimphu","89.6177","27.5768","Lower middle income","IDA",46.86
+"31","BWA","BW","Botswana",2012,NA,14211.0075286066,2.08553315747868,"Sub-Saharan Africa (all income levels)","Gaborone","25.9201","-24.6544","Upper middle income","IBRD",47.6
+"32","CAF","CF","Central African Republic",2012,NA,925.714944887756,0.0635047083017643,"Sub-Saharan Africa (all income levels)","Bangui","21.6407","5.63056","Low income","IDA",42.94
+"33","CAN","CA","Canada",2012,NA,42143.9687843089,13.8584553358252,"North America","Ottawa","-75.6919","45.4215","High income: OECD","Not classified",73.14
 "34","CHE","CH","Switzerland",2012,31.64,57205.3721892359,4.71944729313164,"Europe & Central Asia (all income levels)","Bern","7.44821","46.948","High income: OECD","Not classified",87.67
+"35","CHL","CL","Chile",2012,NA,21370.0993066395,4.65681268534947,"Latin America & Caribbean (all income levels)","Santiago","-70.6475","-33.475","Upper middle income","IBRD",69.93
 "36","CHN","CN","China",2012,42.16,11219.927669958,7.41895460781301,"East Asia & Pacific (all income levels)","Beijing","116.286","40.0495","Upper middle income","IBRD",43
+"37","CIV","CI","Cote d'Ivoire",2012,NA,2803.70093712871,0.397585117426771,"Sub-Saharan Africa (all income levels)","Yamoussoukro","-4.0305","5.332","Lower middle income","IDA",39.72
+"38","CMR","CM","Cameroon",2012,NA,2715.35411027364,0.282904055719138,"Sub-Saharan Africa (all income levels)","Yaounde","11.5174","3.8721","Lower middle income","IDA",36.68
 "39","COD","CD","Congo, Dem. Rep.",2012,42.1,652.38858743842,0.0364137681039835,"Sub-Saharan Africa (all income levels)","Kinshasa","15.3222","-4.325","Low income","IDA",25.01
+"40","COG","CG","Congo, Rep.",2012,NA,5803.08880013078,0.556100199057998,"Sub-Saharan Africa (all income levels)","Brazzaville","15.2662","-4.2767","Lower middle income","IDA",39.44
 "41","COL","CO","Colombia",2012,53.54,12058.461303685,1.70377260152499,"Latin America & Caribbean (all income levels)","Bogota","-74.082","4.60987","Upper middle income","IBRD",50.77
+"42","COM","KM","Comoros",2012,NA,1379.71598734093,0.199928849972944,"Sub-Saharan Africa (all income levels)","Moroni","43.2418","-11.6986","Low income","IDA",31.39
 "43","CRI","CR","Costa Rica",2012,48.61,13839.4689225844,1.66877073956393,"Latin America & Caribbean (all income levels)","San Jose","-84.0089","9.63701","Upper middle income","IBRD",58.53
+"44","CUB","CU","Cuba",2012,NA,19820.9769832893,3.18767488777516,"Latin America & Caribbean (all income levels)","Havana","-82.3667","23.1333","Upper middle income","Not classified",55.07
 "46","CYP","CY","Cyprus",2012,34.31,31920.4454737569,6.12734491983108,"Europe & Central Asia (all income levels)","Nicosia","33.3736","35.1676","High income: nonOECD","Not classified",66.23
 "47","CZE","CZ","Czech Republic",2012,26.13,28727.9072629398,9.61268363875771,"Europe & Central Asia (all income levels)","Prague","14.4205","50.0878","High income: OECD","Not classified",81.47
+"48","DEU","DE","Germany",2012,NA,43600.1134007712,9.19232375153935,"Europe & Central Asia (all income levels)","Berlin","13.4115","52.5235","High income: OECD","Not classified",80.47
 "49","DJI","DJ","Djibouti",2012,45.13,2932.23334234064,0.60610220275265,"Middle East & North Africa (all income levels)","Djibouti","43.1425","11.5806","Lower middle income","IDA",28.52
+"50","DMA","DM","Dominica",2012,NA,10206.274383357,1.89271116691079,"Latin America & Caribbean (all income levels)","Roseau","-61.39","15.2976","Upper middle income","Blend",47.08
 "51","DNK","DK","Denmark",2012,29.08,44246.3306156663,6.5108659961814,"Europe & Central Asia (all income levels)","Copenhagen","12.5681","55.6763","High income: OECD","Not classified",76.92
 "52","DOM","DO","Dominican Republic",2012,45.68,11740.0536291201,2.23991337893829,"Latin America & Caribbean (all income levels)","Santo Domingo","-69.8908","18.479","Upper middle income","IBRD",53.24
+"53","DZA","DZ","Algeria",2012,NA,13452.5526105134,3.47194993128501,"Middle East & North Africa (all income levels)","Algiers","3.05097","36.7397","Upper middle income","IBRD",50.08
 "54","ECU","EC","Ecuador",2012,46.57,10512.4366955457,2.62477365500928,"Latin America & Caribbean (all income levels)","Quito","-78.5243","-0.229498","Upper middle income","IBRD",58.54
+"55","EGY","EG","Egypt, Arab Rep.",2012,NA,10252.5229815309,2.53403898315243,"Middle East & North Africa (all income levels)","Cairo","31.2461","30.0982","Lower middle income","IBRD",61.11
+"56","ERI","ER","Eritrea",2012,NA,NA,NA,"Sub-Saharan Africa (all income levels)","Asmara","38.9183","15.3315","Low income","IDA",25.76
 "57","ESP","ES","Spain",2012,35.89,32235.5959172997,5.66093880333453,"Europe & Central Asia (all income levels)","Madrid","-3.70327","40.4167","High income: OECD","Not classified",79.79
 "58","EST","EE","Estonia",2012,33.15,25921.0285969625,13.3240003749917,"Europe & Central Asia (all income levels)","Tallinn","24.7586","59.4392","High income: OECD","Not classified",74.66
+"59","ETH","ET","Ethiopia",2012,NA,1256.68220812009,0.092877020565442,"Sub-Saharan Africa (all income levels)","Addis ababa","38.7468","9.02274","Low income","IDA",39.43
 "60","FIN","FI","Finland",2012,27.12,40437.5938723363,9.01853833350788,"Europe & Central Asia (all income levels)","Helsinki","24.9525","60.1608","High income: OECD","Not classified",75.72
+"61","FJI","FJ","Fiji",2012,NA,7688.77786554153,1.82477881572896,"East Asia & Pacific (all income levels)","Suva","178.399","-18.1149","Lower middle income","IBRD",53.08
 "62","FRA","FR","France",2012,33.1,37462.3250299433,5.07093102186285,"Europe & Central Asia (all income levels)","Paris","2.35097","48.8566","High income: OECD","Not classified",71.05
+"64","GAB","GA","Gabon",2012,NA,17919.0644839789,2.83862052979599,"Sub-Saharan Africa (all income levels)","Libreville","9.45162","0.38832","Upper middle income","IBRD",46.6
 "65","GBR","GB","United Kingdom",2012,32.57,37569.3152811917,7.33431085881856,"Europe & Central Asia (all income levels)","London","-0.126236","51.5002","High income: OECD","Not classified",77.35
 "66","GEO","GE","Georgia",2012,41.35,8026.50712956533,1.92313777777778,"Europe & Central Asia (all income levels)","Tbilisi","44.793","41.71","Lower middle income","Blend",47.23
+"67","GHA","GH","Ghana",2012,NA,3726.64393911061,0.464968301476263,"Sub-Saharan Africa (all income levels)","Accra","-0.20795","5.57045","Lower middle income","IDA",32.07
 "69","GIN","GN","Guinea",2012,33.73,1219.54715182902,0.221998428552227,"Sub-Saharan Africa (all income levels)","Conakry","-13.7","9.51667","Low income","IDA",28.03
+"70","GMB","GM","Gambia, The",2012,NA,1599.1796159408,0.261767974022582,"Sub-Saharan Africa (all income levels)","Banjul","-16.5885","13.4495","Low income","IDA",29.3
+"71","GNB","GW","Guinea-Bissau",2012,NA,1382.50433559991,0.147567974245022,"Sub-Saharan Africa (all income levels)","Bissau","-15.1804","11.8037","Low income","IDA",35.98
+"72","GNQ","GQ","Equatorial Guinea",2012,NA,38416.1635186061,7.53562293774694,"Sub-Saharan Africa (all income levels)","Malabo","8.7741","3.7523","High income: nonOECD","IBRD",41.06
 "73","GRC","GR","Greece",2012,36.68,25980.0865157009,7.24036725721686,"Europe & Central Asia (all income levels)","Athens","23.7166","37.9792","High income: OECD","Not classified",73.28
+"74","GRD","GD","Grenada",2012,NA,11252.5568168313,2.57269900261671,"Latin America & Caribbean (all income levels)","Saint George's","-61.7449","12.0653","Upper middle income","Blend",35.24
+"76","GTM","GT","Guatemala",2012,NA,6981.50684408022,0.77903199601217,"Latin America & Caribbean (all income levels)","Guatemala City","-90.5328","14.6248","Lower middle income","IBRD",48.06
+"78","GUY","GY","Guyana",2012,NA,6465.61262817204,2.63030287047903,"Latin America & Caribbean (all income levels)","Georgetown","-58.1548","6.80461","Lower middle income","IDA",38.07
 "80","HND","HN","Honduras",2012,57.4,4632.09510795154,1.16132340571792,"Latin America & Caribbean (all income levels)","Tegucigalpa","-87.4667","15.1333","Lower middle income","IDA",48.87
 "81","HRV","HR","Croatia",2012,32.51,21016.0187293145,4.25598222683793,"Europe & Central Asia (all income levels)","Zagreb","15.9614","45.8069","High income: nonOECD","IBRD",62.23
 "82","HTI","HT","Haiti",2012,60.79,1614.08582057792,0.225248590024053,"Latin America & Caribbean (all income levels)","Port-au-Prince","-72.3288","18.5392","Low income","IDA",19.01
 "83","HUN","HU","Hungary",2012,30.55,22701.4502235308,4.48784500001109,"Europe & Central Asia (all income levels)","Budapest","19.0408","47.4984","High income: OECD","Not classified",70.28
+"84","IDN","ID","Indonesia",2012,NA,9453.69822832478,2.4171303885621,"East Asia & Pacific (all income levels)","Jakarta","106.83","-6.19752","Lower middle income","IBRD",44.36
+"86","IND","IN","India",2012,NA,4921.84230808602,1.59743618869607,"South Asia","New Delhi","77.225","28.6353","Lower middle income","Blend",31.23
 "87","IRL","IE","Ireland",2012,32.52,46063.3445925379,7.7874534788987,"Europe & Central Asia (all income levels)","Dublin","-6.26749","53.3441","High income: OECD","Not classified",74.67
+"88","IRN","IR","Iran, Islamic Rep.",2012,NA,16853.7828153936,8.45441748441295,"Middle East & North Africa (all income levels)","Tehran","51.4447","35.6878","Upper middle income","IBRD",51.08
+"89","IRQ","IQ","Iraq",2012,NA,14813.5649123457,4.64271691082567,"Middle East & North Africa (all income levels)","Baghdad","44.394","33.3302","Lower middle income","IBRD",33.39
 "90","ISL","IS","Iceland",2012,26.94,40278.3870438051,5.83123386422879,"Europe & Central Asia (all income levels)","Reykjavik","-21.8952","64.1353","High income: OECD","Not classified",76.5
+"91","ISR","IL","Israel",2012,NA,31993.6238427527,9.54796776436382,"Middle East & North Africa (all income levels)","","35.2035","31.7717","High income: OECD","Not classified",65.78
 "92","ITA","IT","Italy",2012,35.16,35899.7799658795,6.20504432360671,"Europe & Central Asia (all income levels)","Rome","12.4823","41.8955","High income: OECD","Not classified",74.36
+"93","JAM","JM","Jamaica",2012,NA,8560.08713224613,2.70575835409123,"Latin America & Caribbean (all income levels)","Kingston","-76.792","17.9927","Upper middle income","IBRD",58.26
+"94","JOR","JO","Jordan",2012,NA,10432.1751002933,3.55404491360366,"Middle East & North Africa (all income levels)","Amman","35.9263","31.9497","Upper middle income","IBRD",55.78
+"95","JPN","JP","Japan",2012,NA,35735.6167173084,9.63907246332002,"East Asia & Pacific (all income levels)","Tokyo","139.77","35.67","High income: OECD","Not classified",72.35
 "96","KAZ","KZ","Kazakhstan",2012,27.46,23248.9925905127,14.5741598464693,"Europe & Central Asia (all income levels)","Astana","71.4382","51.1879","Upper middle income","IBRD",51.07
+"97","KEN","KE","Kenya",2012,NA,2718.98645948051,0.29418417770378,"Sub-Saharan Africa (all income levels)","Nairobi","36.8126","-1.27975","Low income","IDA",36.99
 "98","KGZ","KG","Kyrgyz Republic",2012,27.36,2922.70287320038,1.804986445998,"Europe & Central Asia (all income levels)","Bishkek","74.6057","42.8851","Low income","IDA",40.63
 "99","KHM","KH","Cambodia",2012,30.76,2846.65744469837,0.367880406586861,"East Asia & Pacific (all income levels)","Phnom Penh","104.874","11.5556","Low income","IDA",35.44
+"100","KIR","KI","Kiribati",2012,NA,1705.43918398277,0.584683924216845,"East Asia & Pacific (all income levels)","Tarawa","172.979","1.32905","Lower middle income","IDA",55.82
+"102","KOR","KR","Korea, Rep.",2012,NA,32222.59394254,11.6805577328622,"East Asia & Pacific (all income levels)","Seoul","126.957","37.5323","High income: OECD","IBRD",63.79
+"103","KWT","KW","Kuwait",2012,NA,78492.3968461194,29.5787293823425,"Middle East & North Africa (all income levels)","Kuwait City","47.9824","29.3721","High income: nonOECD","Not classified",63.94
 "104","LAO","LA","Lao PDR",2012,37.89,4580.94739748603,0.333670062798835,"East Asia & Pacific (all income levels)","Vientiane","102.177","18.5826","Lower middle income","IDA",40.37
+"105","LBN","LB","Lebanon",2012,NA,15221.446857073,4.59765970785034,"Middle East & North Africa (all income levels)","Beirut","35.5134","33.8872","Upper middle income","IBRD",50.15
+"106","LBR","LR","Liberia",2012,NA,784.512357317685,0.245916201190648,"Sub-Saharan Africa (all income levels)","Monrovia","-10.7957","6.30039","Low income","IDA",23.95
+"107","LBY","LY","Libya",2012,NA,22975.8756237746,8.33907406543874,"Middle East & North Africa (all income levels)","Tripoli","13.1072","32.8578","Upper middle income","IBRD",42.72
 "110","LKA","LK","Sri Lanka",2012,39.16,10164.3563482885,0.794480757931845,"South Asia","Colombo","79.8528","6.92148","Lower middle income","Blend",53.88
+"111","LSO","LS","Lesotho",2012,NA,2427.43283566964,1.08013829568504,"Sub-Saharan Africa (all income levels)","Maseru","27.7167","-29.5208","Lower middle income","IDA",20.81
 "112","LTU","LT","Lithuania",2012,35.15,24475.0507509952,4.62950967158482,"Europe & Central Asia (all income levels)","Vilnius","25.2799","54.6896","Upper middle income","Not classified",61.26
 "113","LUX","LU","Luxembourg",2012,34.79,90788.2865762064,20.0842194874808,"Europe & Central Asia (all income levels)","Luxembourg","6.1296","49.61","High income: OECD","Not classified",83.29
 "114","LVA","LV","Latvia",2012,35.48,21122.2982149326,3.47174754795094,"Europe & Central Asia (all income levels)","Riga","24.1048","56.9465","Upper middle income","Not classified",64.05
+"116","MAR","MA","Morocco",2012,NA,6979.89907912757,1.90163939147816,"Middle East & North Africa (all income levels)","Rabat","-6.8704","33.9905","Lower middle income","IBRD",51.89
 "118","MDA","MD","Moldova",2012,29.16,4226.95918930562,1.38355238446543,"Europe & Central Asia (all income levels)","Chisinau","28.8497","47.0167","Lower middle income","IDA",53.36
 "119","MDG","MG","Madagascar",2012,42.65,1399.5143248094,0.119581164561141,"Sub-Saharan Africa (all income levels)","Antananarivo","45.7167","-20.4667","Low income","IDA",26.7
 "121","MEX","MX","Mexico",2012,48.07,16289.5652780893,3.9393729203234,"Latin America & Caribbean (all income levels)","Mexico City","-99.1276","19.427","Upper middle income","IBRD",55.03
+"123","MKD","MK","Macedonia, FYR",2012,NA,11891.6439757102,4.33106747790283,"Europe & Central Asia (all income levels)","Skopje","21.4361","42.0024","Upper middle income","IBRD",50.41
+"124","MLI","ML","Mali",2012,NA,2048.0739172409,0.0616767913125927,"Sub-Saharan Africa (all income levels)","Bamako","-7.50034","13.5667","Low income","IDA",18.43
+"125","MLT","MT","Malta",2012,NA,28355.7055086515,6.35564959292415,"Middle East & North Africa (all income levels)","Valletta","14.5189","35.9042","High income: nonOECD","Not classified",67.42
+"126","MMR","MM","Myanmar",2012,NA,NA,0.246147003223461,"East Asia & Pacific (all income levels)","Naypyidaw","95.9562","21.914","Low income","IDA",27.44
 "127","MNE","ME","Montenegro",2012,32.18,13812.695943286,3.76389822124038,"Europe & Central Asia (all income levels)","Podgorica","19.2595","42.4602","Upper middle income","IBRD",55.52
 "128","MNG","MN","Mongolia",2012,33.75,9990.03804907011,11.6538548230823,"East Asia & Pacific (all income levels)","Ulaanbaatar","106.937","47.9129","Lower middle income","IDA",44.67
+"130","MOZ","MZ","Mozambique",2012,NA,1010.22125187758,0.121269410150295,"Sub-Saharan Africa (all income levels)","Maputo","32.5713","-25.9664","Low income","IDA",29.97
+"131","MRT","MR","Mauritania",2012,NA,3575.98635387756,0.702902013652392,"Sub-Saharan Africa (all income levels)","Nouakchott","-15.9824","18.2367","Lower middle income","IDA",27.19
 "132","MUS","MU","Mauritius",2012,35.84,16961.1109505936,3.24104493893535,"Sub-Saharan Africa (all income levels)","Port Louis","57.4977","-20.1605","Upper middle income","IBRD",58.09
+"133","MWI","MW","Malawi",2012,NA,1085.67899974201,0.0719366009963035,"Sub-Saharan Africa (all income levels)","Lilongwe","33.7703","-13.9899","Low income","IDA",40.06
+"134","MYS","MY","Malaysia",2012,NA,23124.660480641,7.53592675058938,"East Asia & Pacific (all income levels)","Kuala Lumpur","101.684","3.12433","Upper middle income","IBRD",59.31
+"135","NAM","NA","Namibia",2012,NA,9021.89576263068,1.47214773666951,"Sub-Saharan Africa (all income levels)","Windhoek","17.0931","-22.5648","Upper middle income","IBRD",43.71
+"137","NER","NE","Niger",2012,NA,883.251377257212,0.105836134740155,"Sub-Saharan Africa (all income levels)","Niamey","2.1073","13.514","Low income","IDA",36.28
+"138","NGA","NG","Nigeria",2012,NA,5407.32395617592,0.592224312491691,"Sub-Saharan Africa (all income levels)","Abuja","7.48906","9.05804","Lower middle income","IDA",39.2
+"139","NIC","NI","Nicaragua",2012,NA,4488.17450978094,0.795541594620688,"Latin America & Caribbean (all income levels)","Managua","-86.2734","12.1475","Lower middle income","IDA",50.32
 "140","NLD","NL","Netherlands",2012,27.99,46448.884799242,10.1091682571408,"Europe & Central Asia (all income levels)","Amsterdam","4.89095","52.3738","High income: OECD","Not classified",77.75
 "141","NOR","NO","Norway",2012,25.9,65399.836084667,9.94098023481974,"Europe & Central Asia (all income levels)","Oslo","10.7387","59.9138","High income: OECD","Not classified",78.04
+"142","NPL","NP","Nepal",2012,NA,2153.73649262683,0.212548674088467,"South Asia","Kathmandu","85.3157","27.6939","Low income","IDA",37
+"143","NZL","NZ","New Zealand",2012,NA,33065.5112359197,7.82796896622127,"East Asia & Pacific (all income levels)","Wellington","174.776","-41.2865","High income: OECD","Not classified",76.41
+"144","OMN","OM","Oman",2012,NA,41944.9991757071,16.6997203536508,"Middle East & North Africa (all income levels)","Muscat","58.5874","23.6105","High income: nonOECD","Not classified",47.75
+"145","PAK","PK","Pakistan",2012,NA,4460.9230726128,0.919208630374679,"South Asia","Islamabad","72.8","30.5167","Lower middle income","Blend",34.58
 "146","PAN","PA","Panama",2012,51.9,18663.1681828035,2.69361479004669,"Latin America & Caribbean (all income levels)","Panama City","-79.5188","8.99427","Upper middle income","IBRD",56.84
 "147","PER","PE","Peru",2012,45.11,11051.2537713681,1.80779785168943,"Latin America & Caribbean (all income levels)","Lima","-77.0465","-12.0931","Upper middle income","IBRD",45.05
 "148","PHL","PH","Philippines",2012,43.04,6153.07044864692,0.951071109856615,"East Asia & Pacific (all income levels)","Manila","121.035","14.5515","Lower middle income","IBRD",44.02
+"149","PLW","PW","Palau",2012,NA,13510.0345754012,10.776980150318,"East Asia & Pacific (all income levels)","Koror","134.479","7.34194","Upper middle income","IBRD",51.96
+"150","PNG","PG","Papua New Guinea",2012,NA,2525.96210935665,0.6959995080274,"East Asia & Pacific (all income levels)","Port Moresby","147.194","-9.47357","Lower middle income","Blend",41.09
 "151","POL","PL","Poland",2012,32.39,23598.5592763806,7.88060078242576,"Europe & Central Asia (all income levels)","Warsaw","21.02","52.26","High income: OECD","IBRD",69.53
 "153","PRT","PT","Portugal",2012,36.04,27125.1544347714,4.38058681612395,"Europe & Central Asia (all income levels)","Lisbon","-9.13552","38.7072","High income: OECD","Not classified",75.8
 "154","PRY","PY","Paraguay",2012,48.17,7447.17472643709,0.816273360043216,"Latin America & Caribbean (all income levels)","Asuncion","-57.6362","-25.3005","Lower middle income","IBRD",39.25
+"157","QAT","QA","Qatar",2012,NA,135421.72398627,46.6974773072756,"Middle East & North Africa (all income levels)","Doha","51.5082","25.2948","High income: nonOECD","Not classified",63.03
 "158","ROU","RO","Romania",2012,34.88,18910.2782731779,4.07431545512808,"Europe & Central Asia (all income levels)","Bucharest","26.0979","44.4479","Upper middle income","IBRD",50.52
 "159","RUS","RU","Russian Federation",2012,41.59,25316.6357856942,12.8183452615457,"Europe & Central Asia (all income levels)","Moscow","37.6176","55.7558","Upper middle income","IBRD",53.45
+"160","RWA","RW","Rwanda",2012,NA,1510.67810950135,0.0681374828400671,"Sub-Saharan Africa (all income levels)","Kigali","30.0587","-1.95325","Low income","IDA",35.41
+"161","SAU","SA","Saudi Arabia",2012,NA,49729.5174891185,19.1889368429607,"Middle East & North Africa (all income levels)","Riyadh","46.6977","24.6748","High income: nonOECD","Not classified",66.66
+"162","SDN","SD","Sudan",2012,NA,3873.59739823209,0.301083380638175,"Sub-Saharan Africa (all income levels)","Khartoum","32.5363","15.5932","Lower middle income","IDA",24.64
+"163","SEN","SN","Senegal",2012,NA,2225.29602799889,0.574261536992308,"Sub-Saharan Africa (all income levels)","Dakar","-17.4734","14.7247","Lower middle income","IDA",40.83
+"164","SGP","SG","Singapore",2012,NA,77173.2382950922,10.2829076373047,"East Asia & Pacific (all income levels)","Singapore","103.85","1.28941","High income: nonOECD","Not classified",81.78
+"165","SLB","SB","Solomon Islands",2012,NA,2062.45426309817,0.360582123307876,"East Asia & Pacific (all income levels)","Honiara","159.949","-9.42676","Lower middle income","IDA",31.63
+"166","SLE","SL","Sierra Leone",2012,NA,1620.89897028858,0.170511373442722,"Sub-Saharan Africa (all income levels)","Freetown","-13.2134","8.4821","Low income","IDA",21.74
 "167","SLV","SV","El Salvador",2012,41.8,7859.86073025114,1.18544874677899,"Latin America & Caribbean (all income levels)","San Salvador","-89.2073","13.7034","Lower middle income","IBRD",43.79
+"169","SOM","SO","Somalia",2012,NA,NA,0.0635919403047551,"Sub-Saharan Africa (all income levels)","Mogadishu","45.3254","2.07515","Low income","IDA",15.47
+"170","SRB","RS","Serbia",2012,NA,13000.0732946816,6.12060018249562,"Europe & Central Asia (all income levels)","Belgrade","20.4656","44.8024","Upper middle income","IBRD",69.13
+"172","SUR","SR","Suriname",2012,NA,15718.1329921023,4.74562327944223,"Latin America & Caribbean (all income levels)","Paramaribo","-55.1679","5.8232","Upper middle income","IBRD",53.57
 "173","SVK","SK","Slovak Republic",2012,26.12,26091.2798285454,6.05902290100616,"Europe & Central Asia (all income levels)","Bratislava","17.1073","48.1484","High income: OECD","Not classified",74.45
 "174","SVN","SI","Slovenia",2012,25.59,28481.751314373,7.25678326274245,"Europe & Central Asia (all income levels)","Ljubljana","14.5044","46.0546","High income: OECD","Not classified",76.43
 "175","SWE","SE","Sweden",2012,27.32,44433.7266901677,4.94230082776452,"Europe & Central Asia (all income levels)","Stockholm","18.0645","59.3327","High income: OECD","Not classified",78.09
+"176","SWZ","SZ","Swaziland",2012,NA,7870.64474167421,0.979498966464073,"Sub-Saharan Africa (all income levels)","Mbabane","31.4659","-26.5225","Lower middle income","IBRD",37.35
+"177","SYC","SC","Seychelles",2012,NA,24251.5239686008,7.97327384120585,"Sub-Saharan Africa (all income levels)","Victoria","55.4466","-4.6309","Upper middle income","IBRD",55.56
+"178","SYR","SY","Syrian Arab Republic",2012,NA,NA,2.19336228942383,"Middle East & North Africa (all income levels)","Damascus","36.3119","33.5146","Lower middle income","IBRD",54.5
+"180","TCD","TD","Chad",2012,NA,1997.4109391126,0.0426815692544472,"Sub-Saharan Africa (all income levels)","N'Djamena","15.0445","12.1048","Low income","IDA",31.02
+"181","TGO","TG","Togo",2012,NA,1304.18797223193,0.320732936125146,"Sub-Saharan Africa (all income levels)","Lome","1.2255","6.1228","Low income","IDA",27.91
 "182","THA","TH","Thailand",2012,39.26,14853.3296826122,4.54443085915056,"East Asia & Pacific (all income levels)","Bangkok","100.521","13.7308","Upper middle income","IBRD",52.83
 "183","TJK","TJ","Tajikistan",2012,30.52,2386.32747375318,0.385151726865793,"Europe & Central Asia (all income levels)","Dushanbe","68.7864","38.5878","Low income","IDA",31.34
+"184","TKM","TM","Turkmenistan",2012,NA,12689.3438280564,12.5642082521336,"Europe & Central Asia (all income levels)","Ashgabat","58.3794","37.9509","Lower middle income","IBRD",45.07
+"185","TLS","TL","Timor-Leste",2012,NA,2075.98474150486,0.25532700063884,"East Asia & Pacific (all income levels)","Dili","125.567","-8.56667","Lower middle income","IDA",39.41
+"186","TON","TO","Tonga",2012,NA,5132.80523291008,1.71503975412574,"East Asia & Pacific (all income levels)","Nuku'alofa","-175.216","-21.136","Lower middle income","IDA",61.68
+"187","TTO","TT","Trinidad and Tobago",2012,NA,30571.9063533069,33.8196938085644,"Latin America & Caribbean (all income levels)","Port-of-Spain","-61.4789","10.6596","High income: nonOECD","IBRD",52.28
+"188","TUN","TN","Tunisia",2012,NA,10672.5676007406,2.50557067965669,"Middle East & North Africa (all income levels)","Tunis","10.21","36.7899","Upper middle income","IBRD",58.99
 "189","TUR","TR","Turkey",2012,40.17,18449.250016041,4.40299537254827,"Europe & Central Asia (all income levels)","Ankara","32.3606","39.7153","Upper middle income","IBRD",54.91
+"191","TZA","TZ","Tanzania",2012,NA,2289.26187618153,0.196218766181412,"Sub-Saharan Africa (all income levels)","Dodoma","35.7382","-6.17486","Low income","IDA",36.19
 "192","UGA","UG","Uganda",2012,41.01,1696.49442433506,0.115394532638129,"Sub-Saharan Africa (all income levels)","Kampala","32.5729","0.314269","Low income","IDA",39.18
 "193","UKR","UA","Ukraine",2012,24.74,8472.20112920609,6.48720066325535,"Europe & Central Asia (all income levels)","Kiev","30.5038","50.4536","Lower middle income","IBRD",49.01
 "194","URY","UY","Uruguay",2012,41.32,18817.8749217256,2.55963768928739,"Latin America & Caribbean (all income levels)","Montevideo","-56.0675","-34.8941","Upper middle income","IBRD",53.61
+"195","USA","US","United States",2012,NA,51433.0470904727,16.28705288144,"North America","Washington D.C.","-77.032","38.8895","High income: OECD","Not classified",67.52
+"196","UZB","UZ","Uzbekistan",2012,NA,4791.18928890547,3.88973319451208,"Europe & Central Asia (all income levels)","Tashkent","69.269","41.3052","Lower middle income","Blend",43.23
+"198","VEN","VE","Venezuela, RB",2012,NA,18027.8901206199,6.65370826078361,"Latin America & Caribbean (all income levels)","Caracas","-69.8371","9.08165","Upper middle income","IBRD",57.8
 "200","VNM","VN","Vietnam",2012,38.7,5000.76485438209,1.78169660350504,"East Asia & Pacific (all income levels)","Hanoi","105.825","21.0069","Lower middle income","Blend",38.17
+"201","VUT","VU","Vanuatu",2012,NA,2952.41343063372,0.459304721654316,"East Asia & Pacific (all income levels)","Port-Vila","168.321","-17.7404","Lower middle income","IDA",45.88
+"203","YEM","YE","Yemen, Rep.",2012,NA,3675.56337304977,0.735086159141627,"Middle East & North Africa (all income levels)","Sana'a","44.2075","15.352","Lower middle income","IDA",30.16
+"204","ZAF","ZA","South Africa",2012,NA,12598.94312372,9.01649877213629,"Sub-Saharan Africa (all income levels)","Pretoria","28.1871","-25.746","Upper middle income","IBRD",53.51
+"205","ZMB","ZM","Zambia",2012,NA,3552.20024760245,0.235347373405657,"Sub-Saharan Africa (all income levels)","Lusaka","28.2937","-15.3982","Lower middle income","IDA",41.72
+"206","ZWE","ZW","Zimbabwe",2012,NA,1679.12559406643,0.88795612805673,"Sub-Saharan Africa (all income levels)","Harare","31.0672","-17.8312","Low income","Blend",49.54
