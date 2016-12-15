@@ -25,7 +25,7 @@ repmis::set_valid_wd(possible_dir)
 
 Combinedmaps <- read.csv('Maps.csv')
 
-Combined <- read.csv('EPIGINI.csv')
+Combined <- read.csv('EPIGINI2016.csv')
 
 Combined2012 <- read.csv('EPIGINI2012.csv')
 
