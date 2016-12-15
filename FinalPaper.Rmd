@@ -24,6 +24,7 @@ library(tidyr)
 library(plotly)
 library(plm)
 library(googleVis)
+library(lmtest)
 
 possible_dir <- c('C:/RajuPC/CollaborativeSSDA/Assignments/Assignment4', '/Users/mariorodriguez/Desktop/Assignment4')
 repmis::set_valid_wd(possible_dir)
@@ -128,7 +129,25 @@ Regression Equation: The regression equation is written as follows:
 
 Descriptive Analysis goes here.
 
-# Inferential Analysis
+# Inferential Analysis  
+A pooled Ordinary Least Sqaures (OLS) regression estimation is used to estimate the effect of Gini coefficient on EPI over the given time period. However, considering this is a panel data, there is a likelihood that there is a presence of time-invariant panel effects $\alpha_i!=0$. If $\alpha_i!=0$, OLS residuals would suffer from serial correlation and panel heteroscedasticity and OLS estimation will be inefficient.  
+
+Show plot graph output for pooled OLS.
+Show heteroscedasticity graph... (put it only if it is heteroscedastic)  
+
+When time-invariant panel effects are present we should estimate our panel not with (pooled) OLS, but with the fixed-effects or random effects estimator. We can test for the presence of time-invariant panel effects in the Fixed-effects model by applying an F-test on the joint significance of $\alpha_i$ s.  
+
+Use stargazer output of FE model and check. 
+
+We can test for the presence of time-invariant panel effects in the Random-Effects model by applying a Breusch-Pagan LM test on the significance of $\alpha_i$ in the error term.  
+
+Show Breusch-Pagan test for Random Effects  
+
+Then do a Hausman test   
+```{r hausman, results='asis'}
+phtest(m5, m6)  
+```
+Then show all the regressions in one place  
 
 ```{r regression, results='asis'}
 stargazer::stargazer(m4, m5, m6, type='latex', digits = 2, header = FALSE,  
@@ -137,7 +156,21 @@ stargazer::stargazer(m4, m5, m6, type='latex', digits = 2, header = FALSE,
 
 # Robustness
 
-Robustness tests go here.
+Checking serial correlation of the FE estimator:
+```{r serialcorrelation, results='asis'}
+pbgtest(m5)  
+```
+
+```{r heteroscedasticity, results='asis'}
+bptest(EPI ~ Gini + factor(country), data = Combined2014, studentize=F)  
+```
+  
+  
+```{r correcting, results='asis'}
+coeftest(m5, vcovHC(m5, method = "arellano"))  
+```
+ 
+
 
 # Final Analysis
 
