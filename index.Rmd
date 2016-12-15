@@ -109,12 +109,12 @@ The use of the EPI is only one more step in determining if there is a relationsh
 print(EPImap, tag = 'chart')
 ```
 
-The map shows that most developed economies have better EPI scores and that less developed countries in Africa and Latin America, which usually have higher levels of inequality, have lower scores. The next chart shows a relationship between the scores of 2012 and the countries that have a Gini index for that year. The size of the circles represents the inequality and the color the EPI score. (2012 is the most recent year with a high number of Gini coefficients and EPI scores)
+The map shows that most developed economies have better EPI scores and that less developed countries in Africa and Latin America, which usually have higher levels of inequality, have lower scores. The next chart shows a relationship between the scores of the years that we used on the previous maps. The size of the circles represents the inequality and the color the EPI score.
 
 
 ```{r descriptive, echo = FALSE, results='asis', message = FALSE, warning = FALSE}
-plot_ly(Combined2012, x = ~EPI.2012, y = ~GINI,
-        mode = 'markers', text = ~country, color = ~EPI.2012, size = ~GINI)
+plot_ly(Combinedmaps, x = ~EPI, y = ~Gini,
+        mode = 'markers', text = ~paste('Country:', country, 'Year:', year), color = ~EPI, size = ~Gini)
 ```
 
 
