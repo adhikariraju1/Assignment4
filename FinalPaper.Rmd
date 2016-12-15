@@ -162,7 +162,11 @@ Regression Equation: The regression equation is written as follows:
 
 # Descriptive Analysis
 
-Descriptive Analysis goes here.
+```{r pressure, echo=FALSE}
+ggplot(Combined2012, aes(x=EPI.2012, y=GINI)) +
+    geom_point(shape=1) + 
+    geom_smooth(method=lm)
+```
 
 # Inferential Analysis  
 A pooled Ordinary Least Sqaures (OLS) regression estimation is used to estimate the effect of Gini coefficient on EPI over the given time period. However, considering this is a panel data, there is a likelihood that there is a presence of time-invariant panel effects $\alpha_i!=0$. If $\alpha_i!=0$, OLS residuals would suffer from serial correlation and panel heteroscedasticity and OLS estimation will be inefficient.  
