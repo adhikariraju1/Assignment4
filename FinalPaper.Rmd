@@ -2,7 +2,7 @@
 title: "Effect of Income Inequality on Environment Performance Index"
 author: "Raju Adhikari and Mario Rodriguez"
 date: "December 14, 2016"
-output: html_document
+output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
