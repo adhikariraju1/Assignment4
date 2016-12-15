@@ -13,11 +13,11 @@ library(reshape2)
 possible_dir <- c('C:/RajuPC/CollaborativeSSDA/Assignments/Assignment4', '/Users/mariorodriguez/Desktop/Assignment4')
 repmis::set_valid_wd(possible_dir)
 
-Combined <- read.csv('EPIGINI.csv')
+Combinedmaps <- read.csv('EPIGINI2016.csv')
 
 Combinedmaps <- Combinedmaps[, -c(1)]
 
-Combinedmaps <- Combined[, c('country', 'iso2c', 'year', 'GiniCoeff', 'EPIValue', 'CO2emissions')]
+Combinedmaps <- Combinedmaps[, c('country', 'iso2c', 'year', 'Gini', 'EPI', 'CO2emissions')]
 
 Combinedmaps <- Combinedmaps[complete.cases(Combinedmaps),]
 

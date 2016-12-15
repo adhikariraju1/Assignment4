@@ -12,7 +12,7 @@ library(repmis)
 possible_dir <- c('C:/RajuPC/CollaborativeSSDA/Assignments/Assignment4', '/Users/mariorodriguez/Desktop/Assignment4')
 repmis::set_valid_wd(possible_dir)
 
-GINI <- WDI(country = 'all', start = '2002', end = '2016', indicator = c('SI.POV.GINI', 'NY.GDP.PCAP.PP.CD', 'EN.ATM.CO2E.PC', 'EN.POP.DNST', 'SP.URB.TOTL.IN.ZS'), extra = TRUE)
+GINI <- WDI(country = 'all', start = '2002', end = '2014', indicator = c('SI.POV.GINI', 'NY.GDP.PCAP.PP.CD', 'EN.ATM.CO2E.PC', 'EN.POP.DNST', 'SP.URB.TOTL.IN.ZS'), extra = TRUE)
 
 EPI2016 <- read.xlsx("2016_epi_framework_indicator_scores_friendly_0.xls", 3)
 EPI2014 <- read.xlsx("2014_epi_framework_indicator_scores_friendly_0.xls", 3)
@@ -53,7 +53,6 @@ EPI <- merge(EPI, EPI2010, by = c('country'))
 EPI <- merge(EPI, EPI2011, by = c('country'))
 EPI <- merge(EPI, EPI2012, by = c('country'))
 EPI <- merge(EPI, EPI2014, by = c('country'))
-EPI <- merge(EPI, EPI2016, by = c('country'))
 
 names(EPI)[names(EPI)=="EPI.2002"] <- "2002"
 names(EPI)[names(EPI)=="EPI.2003"] <- "2003"
@@ -67,15 +66,18 @@ names(EPI)[names(EPI)=="EPI.2010"] <- "2010"
 names(EPI)[names(EPI)=="EPI.2011"] <- "2011"
 names(EPI)[names(EPI)=="EPI.2012"] <- "2012"
 names(EPI)[names(EPI)=="EPI.Score"] <- "2014"
-names(EPI)[names(EPI)=="X2016.EPI.Score"] <- "2016"
 
 names(EPI2016)[names(EPI2016)=="X2016.EPI.Score"] <- "EPI2016"
 
 
-EPITest <- gather(EPI, year, EPI, 2:14)
+EPI$country <- countrycode(EPI$country, 'country.name', 'iso3c', warn = FALSE)
+
+names(EPI)[names(EPI)=="country"] <- "iso3c"
+
+EPITest <- gather(EPI, year, EPI, 2:13)
 names(EPITest)[names(EPITest)=="iso"] <- "iso3c"
 
-Combined <- merge(GINI, EPITest, by = c('country', 'year'))
+Combined <- merge(GINI, EPITest, by = c('iso3c', 'year'))
 
 names(Combined)
 names(Combined)[names(Combined)=="SI.POV.GINI"] <- "Gini"

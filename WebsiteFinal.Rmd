@@ -1,5 +1,5 @@
 ---
-title: "Does income inequality reduce environmental performance?"
+title: "Does income inequality decrease environmental performance?"
 author: "Raju Adhikari and Mario Alonso Rodriguez"
 date: "9/12/2016"
 output: html_document
@@ -18,6 +18,7 @@ library(plm)
 library(googleVis)
 library(repmis)
 library(magrittr)
+library(knitr)
 
 possible_dir <- c('C:/RajuPC/CollaborativeSSDA/Assignments/Assignment4', '/Users/mariorodriguez/Desktop/Assignment4')
 repmis::set_valid_wd(possible_dir)
@@ -45,7 +46,7 @@ EPImap <- gvisGeoChart(Combinedmaps, locationvar = 'iso2c',
 CO2map <- gvisGeoChart(Combinedmaps, locationvar = 'iso2c',
                        colorvar = 'CO2emissions', hovervar = 'year',
                        options = list(
-                         colors = "['white', 'black']"
+                         colors = "['gray', 'black']"
                        ))
 
 ax <- list(
@@ -56,38 +57,66 @@ ax <- list(
   showgrid = FALSE
 )
 ```
+![Credit:[DPU-UCL](https://www.flickr.com/photos/dpu-ucl/)](StiltHouses.jpg)
 
-## GINI 
+## The negative consequences of income inequality
 
-This is a test to see if the map is more complete this time
+Income inequality is one of the biggest issues grappling both developing and developed countries alike. According to the [IMF](https://www.imf.org/external/pubs/ft/sdn/2015/sdn1513.pdf), the gap between the rich and the poor is at its highest in decades. The organization argues that inequality could be a sign of lack of income mobility and opportunity. Furthermore, it has significant implications for growth and macroeconomic stability, it can concentrate political and decision making power in few hands, lead to a suboptimal use of human resources, cause investment-reducing political and economic instability and increase the risk of crisis. Plethora of research on inequality show that it affects education, healthcare and even voter turnout and elections in many countries. Today, inequality [seems to be to blame](http://blogs.lse.ac.uk/politicsandpolicy/the-brexit-trump-syndrome/) for a wave of election of populist and isolationist governments in Western democracies like the United States and the United Kingdom.
+
+The most widely used estimator for inequality is the GINI coefficient. Developed in 1912, by Italian statistician Corrado Gini, it is a way of comparing how distribution income in a country compares with another in which everybody earned the same amount. Inequality on the Gini scale is measured between 0, where everybody is equal, and 100, where all the income is earned by one person. Despite some criticism about [some inaccuracies](http://www.bbc.co.uk/news/blogs-magazine-monitor-31847943) on certain percentages of the population, the index is still the golden standard for measuring inequality in societies. The following map shows countries with the years of the last calculation of the index of the [World Bank](http://data.worldbank.org/indicator/SI.POV.GINI) up to 2013 (the last year with CO2 emissions per capita, a metric we will use below). 
 
 ```{r GINImap, results='asis', echo=FALSE}
 print(GINImap, tag = 'chart')
 ```
+Note: White countries are the ones without a Gini value after 2002
 
-## EPI
+As we can see, inequality seems to be concentrated in regions with developing countries like Latin America or Africa. Still, there are developed countries like the United States with higher levels of inequality.
 
-This is a test of the 
+## Inequality and the environment
 
-```{r EPI, results='asis', echo=FALSE}
-print(EPImap, tag = 'chart')
-```
+One negative consequence of income inequality that might not get as much attention is the effect of inequality on environment. Climate change is one of the biggest threats of our generation, but it is very much disconnected with other social and economic issues that researchers usually talk about. Showing a relationship between inequality and environment is extremely important to create a better roadmap for development. 
 
-## CO2 
-
-Check the emissions
+However, not all indicators of environmental degradation are good for analysis. CO2 is one of the greenhouse gases that is responsible for climate change and countries that emit more quantities of it are causing an irreversible damage to the world's environment. The following map of CO2 emissions per capita meassured in metric tons (with the same years as our GINI map and with information from the [World Bank](http://data.worldbank.org/indicator/EN.ATM.CO2E.PC)) leads to interesting counclusions.
 
 ```{r CO2map, results='asis', echo=FALSE}
 print(CO2map, tag = 'chart')
 ```
 
-## Bar chart of EPI
+The map shows that the highest emissions per capita in the years of our values for latest Gini value were developed economies like the United States and Australia. Also, that less developed countries, which usually have higher levels of inequality, are less industrialized so they emit less CO2 per capita. This calls for a more comprehensive indicator that could help explain other ways in which countries take care of the environment. 
 
-Here we will show that there are differences between levels of income on Environmental Performance
+The Environmental Performance Index is an indicator that seeks to quantify the environmental performance of a state's policies. The precursor to this metric was the Pilot Environmental Performance Index, first released in 2002 and designed to supplement the environmental targets in the United Nations Millennium Development Goals. The EPI is developed by the [Yale Center for Environmental Law & Policy](http://envirocenter.yale.edu/) and ranks countries' performance in two areas: protection of human health and protection of ecosystems. The Index scores national performance in nine issue areas comprised of more than 20 indicators. Here is a table with the basic information about the framework of the indicator. To know all about the EPI and it's indicators visit the [EPI's website](http://epi.yale.edu/).
+
+
+|Environmental Health(50%) | Ecosystem Vitality(50%) |      
+|--------------------------|-------------------------|
+|Health impacts(33%)       |Water Resources (25%)    |
+|Air Quality(33%)          |Agriculture (10%)        |
+|Water and Sanitation (33%)|Forests (10%)            |
+|                          |Fisheries (5%)           |
+|                          |Biodiversity and Habitat (25%)|
+|                          |Climate and energy (25%) |
+
+In its 15th year, the EPI report for 2016 was launched at the World Economic Forum. The organizers declared that the Index is more relevant than ever to achieving the United Nations’ Sustainable Development Goals and carrying out the Paris Agreement. Next, there is chart with the scores for this year. In the first place is Finland with a score of 90.68 and on the bottom is Somalia with 27.66.  
 
 ```{r Bar, results='asis', echo=FALSE}
 plot_ly(EPI2016, x = ~country, y = ~EPI2016, type = 'bar', name = 'EPI') %>%
 layout(xaxis = ax)
 ```
 
-There is a space over here
+The use of the EPI is only one more step in determining if there is a relationship between inequality and the environment, in this case a country's performance in environmental matters. The next map shows that a good EPI score could be related with a low Gini coefficient. The map uses the same years as the previous two maps.
+
+```{r EPI, results='asis', echo=FALSE}
+print(EPImap, tag = 'chart')
+```
+
+The map shows that most developed economies have better EPI scores and that less developed countries in Africa and Latin America, which usually have higher levels of inequality, have lower scores. The next chart shows a relationship between the scores of 2012 and the countries that have a Gini index for that year. The size of the circles represents the inequality and the color the EPI score. (2012 is the most recent year with a high number of Gini coefficients and EPI scores)
+
+
+```{r descriptive, echo = FALSE, results='asis', message = FALSE, warning = FALSE}
+plot_ly(Combined2012, x = ~EPI.2012, y = ~GINI,
+        mode = 'markers', text = ~country, color = ~EPI.2012, size = ~GINI)
+```
+
+
+
+One paragraph with the executive summary
