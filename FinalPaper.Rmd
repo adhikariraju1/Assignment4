@@ -10,7 +10,7 @@ bibliography: finalsources.bib
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Commands: 
+# Commands 
 Please see the attached file at the end of the document to see all the commands used and for reproducibility.
 
 ```{r commands, include=FALSE}
@@ -65,44 +65,54 @@ m6 <- plm(EPIValue ~ GiniCoeff + GDPperCapPPP, data=Combined, index= c('country'
 ```
 
 
-## Abstract
+# Abstract
 
-Abstract goes here.
+_Key words: Inequality, environment, Gini, EPI_
 
-## Introduction
+# Introduction
 
-Income inequality is one of the biggest issues grappling both developing and developed countries alike. While most development agendas in the past have focused heavily on poverty, it has been clearly established that income inequality is the pressing issue now. The UN Sustainable Development Goals have also put a strong emphasis on income inequality. Increased urbanization and growing reliance on international trade have increased even further the differences between the poor and the rich and through globalization it has become more visible to all. Inequality has been considered the cause of many social, political and economic crisis around the world. Plethora of research on inequality show that it affects education, healthcare [@lynch2000income], the economy, and even voter turnout and elections in many countries. However, the focus of our research won't further explore any of these social or political issues. We aim to research the effect of inequality on environment. We find this interesting because climate change is one of the biggest threats of our generation, but it is very much disconnected with other social and economic issues that scholars usually talk about. Showing a relationship between inequality and environment can be extremely important to create a better roadmap for development, since policymakers may find better approaches to solve these issues if they are somehow related.
+Income inequality is one of the biggest issues grappling both developing and developed countries alike. While most development agendas in the past have focused heavily on poverty, it has been clearly established that income inequality is the pressing issue now. The UN Sustainable Development Goals have also put a strong emphasis on income inequality. Increased urbanization and growing reliance on international trade have increased even further the differences between the poor and the rich and through globalization it has become more visible to all. Inequality has been considered the cause of many social, political and economic crisis around the world. Plethora of research on inequality show that it affects education, healthcare [@lynch2000income], the economy, and even voter turnout and elections in many countries. However, the focus of our research won't further explore any of these social or political issues. We aim to research the effect of inequality on the environment. We find this interesting because climate change is one of the biggest threats that our generation is facing, but it is very much disconnected with other social and economic issues that scholars usually talk about. Showing a relationship between inequality and environment can be extremely important to create a better roadmap for development, since policymakers may find better approaches to solve these issues if they are found to be somehow corelated.
 
-## Methodology
+## Inequality: 
+According to the _**IMF**_, the gap between the rich and the poor is at its highest in decades. The organization argues that inequality could be a sign of lack of income mobility and opportunity. Furthermore, it has significant implications for growth and macroeconomic stability, it can concentrate political and decision making power in few hands, lead to a suboptimal use of human resources, cause investment-reducing political and economic instability and increase the risk of crisis.  
 
-The methodology for this paper will be divided into two broad sections:
+The most widely used estimator for inequality is the GINI coefficient. Developed in 1912, by Italian statistician Corrado Gini, it is a way of comparing how distribution income in a country compares with another in which everybody earned the same amount. Inequality on the Gini scale is measured between 0, where everybody is equal, and 100, where all the income is earned by one person. Despite some criticism about some _**inaccuracies**_ on certain percentages of the population, the index is still the golden standard for measuring inequality in societies. 
 
-Theoretical analysis: We will analyze scholarly sources that have influenced the discussion on the relationship between inequality and environment. We will consider various academic sources, reports by international non-governmental organizations and their findings. The United Nations has several resources on this topic but most are opinion pieces and case studies. Therefore, this gives us the perfect premise to analyze scientific empirical research on the topic. This leads us to our main methodology. 
+## Environment:
+Show environment issues around the world. UN sustainability stuff  
 
-Statistical analysis: To do a statistical analysis of the issue, it is extremely important to locate data sources. The World Bank Database has all the indicators necessary to do a thorough analysis of the topic. Some of the indicators used to measure inequality are: Gini Index, Palma ratio, etc. We will do a panel data regression with the Gini index as an independent variable and emissions of CO2 per capita as a dependent variable. We could also control for GDP per capita, to test if the relationship between the two is  determined by the level of income. We will use various descriptive and inferential statistics and use plots, graphs and charts to show various relationship that the model may predict.
+Carbon Emissions and other ways to measure how the envrionment is doing  
 
-## Literature Review
+Environment Performance Index: what it is and what it entails
 
-A few scholars have already connected the dots and analyzed the relationship between inequality and environment. Nobel Laureate Joseph E. Stiglitz argues that inequality can contribute to environmental degradation because the poor tend to have less interest in pursuing policies designed to protect the environment and therefore good environment policies will be less supported. [@conca2014green] He also argues that the relationship goes both ways in the sense that good environmental policies will help build social cohesion and reduce inequality. [@conca2014green] J. Timmons Roberts believes that global warming is all about inequality based on who created it and who suffers from it the most. [@roberts2001global] Nazrul Islam, a Senior Economic Affairs Officer at the Development Policy Analysis Division of UN DESA provides an analytical framework to explain negative correlations between inequality and quality of environment and suggests that reducing inequality will help protect the environment. [@nazrul2015inequality] He adds that gender inequality is another dimension that affects environment thus providing us even more reason to examine this case. [@nazrul2015inequality] Wilkinson and Pickett argue that equal societies are better in terms of social cohesion and public spiritedness, which they link to being fundamental in responding to environmental issues. [@wilkinson2011spirit] They show statistically that more equal countries recycle a higher proportion of their waste, a clear indication of how inequality affects the environment. [@wilkinson2011spirit]  Sternreview report asserts that climate change is an externality whose cause and consequence both involves deep inequalities. [@stern2007economics] Several other scholars have vigorously analyzed environment and human security [@barnett2007climate], climate change in poor and unequal countries [@gordon2007climate], inequality and resource management [@Baland1999773], inequality and environmental sustainability [@baland2007inequality], and inequality as a cause of environmental degradation [@BOYCE1994169] - all of which provide ample theoretical basis to continue this research.
+# Literature Review: Interconnectedness between Inequality and Environment
 
-## Operationalization
+A few scholars have already connected the dots and analyzed the relationship between inequality and environment. Nobel Laureate Joseph E. Stiglitz argues that inequality can contribute to environmental degradation because the poor tend to have less interest in pursuing policies designed to protect the environment and therefore good environment policies will be less supported [@conca2014green]. He also argues that the relationship goes both ways in the sense that good environmental policies will help build social cohesion and reduce inequality [@conca2014green]. J. Timmons Roberts believes that global warming is all about inequality based on who created it and who suffers from it the most [@roberts2001global]. Nazrul Islam, a Senior Economic Affairs Officer at the Development Policy Analysis Division of UN DESA provides an analytical framework to explain negative correlations between inequality and quality of environment and suggests that reducing inequality will help protect the environment [@nazrul2015inequality]. He adds that gender inequality is another dimension that affects environment thus providing us even more reason to examine this case [@nazrul2015inequality]. Wilkinson and Pickett argue that equal societies are better in terms of social cohesion and public spiritedness, which they link to being fundamental in responding to environmental issues. [@wilkinson2011spirit] They show statistically that more equal countries recycle a higher proportion of their waste, a clear indication of how inequality affects the environment. [@wilkinson2011spirit]  Sternreview report asserts that climate change is an externality whose cause and consequence both involves deep inequalities. [@stern2007economics] Several other scholars have vigorously analyzed environment and human security [@barnett2007climate], climate change in poor and unequal countries [@gordon2007climate], inequality and resource management [@Baland1999773], inequality and environmental sustainability [@baland2007inequality], and inequality as a cause of environmental degradation [@BOYCE1994169] - all of which provide ample theoretical basis to continue this research.
+
+# Methodology
+
+We have used quantitative analysis using R programming to test the hypothesis. The descriptive and inferential statistical measures used in the paper are showcased using tables, plots, graphs and maps, all of which are made using R. The results obtained from quantitative analysis is meticulously coupled with qualitative literature review that consisted of scholarly articles and reports by experts of the fields. We have analyzed scholarly sources that have influenced the discussion on the relationship between inequality and environment. 
+
+To do a statistical analysis of the issue, it is extremely important to locate data sources. The World Bank Database has all the indicators necessary to do a thorough analysis of the topic. Some of the indicators used to carry out the research were: Gini Coefficient, Environment Performance Index, GDP per Capita Purchasing Power Parity, and Population Density. The date was extracted from the World Bank API, and ........... Since the data were obtained from multiple sources, they had to be cleaned and merged, which resulted in a panel dataset from years ... to .... Year-specific data was used to draw several maps and plots. However, for the inferential analysis using regression, the entire panel data with all the relevant dependent, independent, and control variables were used.  
+
+# Operationalization
 
 Operationalization goes here.
 
-## Statistical Analysis
+# Statistical Analysis
 
 Statistical Analysis goes here.
 
-## Robustness
+# Robustness
 
 Robustness tests go here.
 
-## Final Analysis
+# Final Analysis
 
 Final Analysis goes here.
 
-## Conclusion
+# Conclusion
 
 Conclusion goes here.
 
-## Bibliography
+# Bibliography
