@@ -115,9 +115,8 @@ According to the IMF [@dabla2015causes], the gap between the rich and the poor i
 The most widely used estimator for inequality is the GINI coefficient. Developed in 1912, by Italian statistician Corrado Gini, it is a way of comparing how distribution income in a country compares with another in which everybody earned the same amount. Inequality on the Gini scale is measured between 0, where everybody is equal, and 100, where all the income is earned by one person. Despite some criticism about some inaccuracies [@bbcnews_2015] on certain percentages of the population, the index is still the golden standard for measuring inequality in societies. 
 
 ## Environment:  
-**Raju write something on Enviroment and Carbon emissions**   
-Show environment issues around the world. UN sustainability stuff  (100 words)
-Carbon Emissions and other ways to measure how the envrionment is doing  (100 words)  
+   
+Scholars believe that climate change represents the most globalized impact of humanity on nature and something that has the potential to infuse great suffering to the current and the future generation [@lever2010routledge]. Heavy industrial work and rapid globalization has increased the impact on environment at a very rapid level. Many cities in China and India are filled with smog, while many island nations face constant environmental hazards perpetrated by climate change. Since most of the turmoil seen in the environment is related to anthropogenic activities, the measures to control must start from the people. Change in production and consumption habits and a reduction in emission of green house gases have been at the forefront of policy agendas for decades now. However, there has been a real challenge in quantifying the effect on the environment so it can be fit in economic development models. Many scholars have presented various viewpoints on how the issue of climate change can be dealt with but the one that stands out the most in by Elanor Ostrom. Her solution to protecting the common pool resources is my strong institutions circled around the people [@ostrom2015governing]. But then the question that rises is are people in all economic situation equally motivated to care about the environment. We will be analyzing that further in the paper.  
 
 Environment Performance Index: The Environmental Performance Index (EPI) is an indicator that seeks to quantify the environmental performance of a state's policies. The precursor to this metric was the Pilot Environmental Performance Index, first released in 2002 and designed to supplement the environmental targets in the United Nations Millennium Development Goals. The EPI is developed by the Yale Center for Environmental Law & Policy and ranks countries' performance in two areas: protection of human health and protection of ecosystems. The Index scores national performance in nine issue areas comprised of more than 20 indicators. Here is a table with the basic information about the framework of the indicator.  
 
@@ -148,9 +147,7 @@ Dependent Variable: The dependent variable for our research is Environment Perfo
 
 Explanatory Variable: The main independent (explanatory) variable used for our research is the Gini coefficient, written as _Gini_. Our dataframe consists of Gini for 138 countries from 2002-2014. Due to the fact that Gini is not measured every year by the respective countries, data for some of the years are missing.
 
-Control Variables: The first control variable is GDP per capita (PPP). It is written as _GDPperCapPPP_. Our dataframe consists of GDP per Capita (PPP) from 2002-2014 and it was obtained from the World Bank API and merged into the dataframe that consisted EPI and Gini. The second control variable is Population Density and it is written as _PopulationDens_. Our dataframe conists of Population Density from 2002-2014 and it was obtained from the World Bank API and merged into the dataframe that consisted EPI and Gini. We decided to utilize the Log of GDP, given that it changes multiplicatively than additively, so analysis on logarithmic scale is helpful. 
-
-**Raju Write more on the theoretical relevance of the chosen control variables above**  
+Control Variables: The first control variable is GDP per capita (PPP). It is written as _GDPperCapPPP_. Our dataframe consists of GDP per Capita (PPP) from 2002-2014 and it was obtained from the World Bank API and merged into the dataframe that consisted EPI and Gini. We decided to utilize the Log of GDP, given that it changes multiplicatively than additively, so analysis on logarithmic scale is helpful. Purchasing power has been established as one of the main dimensions of power that affect social decisions on environment protection [@boyce2003inequality]. The second control variable is Population Density and it is written as _PopulationDens_. Our dataframe conists of Population Density from 2002-2014 and it was obtained from the World Bank API and merged into the dataframe that consisted EPI and Gini. Population-environment theories suggest that higher population density can have negative impact on the environment due to land degradation, water use, etc [@de2007population]. Moreover the correlation between population density and inequality justifies the use of the control variable [@wheeler2004wage].      
 
 Research Question: Our research question is "Does income inequality affect the environment performance index?" Through this question, we are planning on analyzing the relationship between inequality and environment so that we can better understand the policy implication of these highly relevant areas.
 
@@ -162,15 +159,16 @@ Regression Equation: The regression equation is written as follows:
 
 ![World map with most recent values of GINI](GINImap.png)
 
+As we can see in the Gini Map, inequality seems to be concentrated in regions with developing countries like Latin America or Africa. Still, there are developed countries like the United States with higher levels of inequality.
+
 ![World map with the values of EPI in the same years as GINI)](EPImap.png)
 
-**Had to use screenshots for the maps since gvis only works on html**  
+The EPI map shows that most developed economies have better EPI scores and that less developed countries in Africa and Latin America, which usually have higher levels of inequality, have lower scores.
 
-
-Simple regression plot: **Raju describe what the plot shows**
+Simple regression plot: The plot below shows the correlation between EPI (2012) and Gini Coefficient (2012). As we can see, there is an inverse relationship showing that a rise in Gini would cause a decrease in the EPI. The more unequal a country is the worse it will perform in the environment. We will estimate the effect of this relationship through regression tables in the next section.  
 
 ```{r ggplot, echo = FALSE, warning=FALSE, message=FALSE}
-ggplot(Combined2012, aes(x=EPI.2012, y=GINI)) +
+ggplot(Combined2012, aes(x=GINI, y=EPI.2012)) +
     geom_point(shape=1) + 
     geom_smooth(method=lm)
 ```
@@ -251,6 +249,6 @@ stargazer(coef1, coef2, coef3, coef4, type = 'latex', digits = 2, header = FALSE
 
 # Conclusion
 
-**Raju: write the conclusion**
+Social scientists who have studied the effect of income inequality on the environment have often found them to be inrtertwined concepts. Boyce (2003) suggests that greater inequality in the distribution of power leads to lower levels of environmental protection and hence greater environmental degradation [@boyce2003inequality]. In this paper, we identified two important variables that represent inequality and environment performance and statistically analyzed their relationship. We found that inequality has a negative impact on the Environment Performance Index, meaning more unequal countries will perform bad on the environment. The important point that have risen from this analysis is that there is a growing need to look at environment through a social and economic lense. To protect the environment doesn't only mean to reduce carbon emissions through emission caps and command and control mechanisms, but also through promoting a sustainable economic development that creates more equal societies. Currently, the effect of climate change falls heavily on poor and unequal countries. However, they are unable to do anything about it since policies in those countries prioritize economic development over environment protection. Therefore, focusing on inequality may serve as a catalyst to solve the issue of environment, in those places, in ways it has not been done before.
 
 # Bibliography
