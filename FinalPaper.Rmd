@@ -100,21 +100,19 @@ aggregate(Gini ~ year, Combined2014, mean)
 
 # Abstract  
 
-**Raju will write the abstract**  
+The aim of this paper is to quantitatively analyze the effect of income inequality on the environment. The paper intends to carry out the research using a set of relevant variables that describe inequality and environment performance while controlling for other relvant variables. The aims to research the specific question of whether income inequality of a country affects its Environmental Perfomance Index (EPI). Various descriptive and inferential statistical methods are used to analyze and estimate the effects. The goal is find policy relevance of the interconnected of the two entities.  
 
-_Key words: Inequality, environment, Gini, EPI_
+_Key words: Inequality, Environmental Performance Index (EPI)_
 
 # Introduction
-
-**Raju will add some more stuff if needed**    
 
 Income inequality is one of the biggest issues grappling both developing and developed countries alike. While most development agendas in the past have focused heavily on poverty, it has been clearly established that income inequality is the pressing issue now. The UN Sustainable Development Goals have also put a strong emphasis on income inequality. Increased urbanization and growing reliance on international trade have increased even further the differences between the poor and the rich and through globalization it has become more visible to all. Inequality has been considered the cause of many social, political and economic crisis around the world. Plethora of research on inequality show that it affects education, healthcare [@lynch2000income], the economy, and even voter turnout and elections in many countries. However, the focus of our research won't further explore any of these social or political issues. We aim to research the effect of inequality on the environment. We find this interesting because climate change is one of the biggest threats that our generation is facing, but it is very much disconnected with other social and economic issues that scholars usually talk about. Showing a relationship between inequality and environment can be extremely important to create a better roadmap for development, since policymakers may find better approaches to solve these issues if they are found to be somehow corelated.  
 
 ## Inequality: 
 
-According to the [@dabla2015causes], the gap between the rich and the poor is at its highest in decades. The organization argues that inequality could be a sign of lack of income mobility and opportunity. Furthermore, it has significant implications for growth and macroeconomic stability, it can concentrate political and decision making power in few hands, lead to a suboptimal use of human resources, cause investment-reducing political and economic instability and increase the risk of crisis.  
+According to the IMF [@dabla2015causes], the gap between the rich and the poor is at its highest in decades. The organization argues that inequality could be a sign of lack of income mobility and opportunity. Furthermore, it has significant implications for growth and macroeconomic stability, it can concentrate political and decision making power in few hands, lead to a suboptimal use of human resources, cause investment-reducing political and economic instability and increase the risk of crisis.  
 
-The most widely used estimator for inequality is the GINI coefficient. Developed in 1912, by Italian statistician Corrado Gini, it is a way of comparing how distribution income in a country compares with another in which everybody earned the same amount. Inequality on the Gini scale is measured between 0, where everybody is equal, and 100, where all the income is earned by one person. Despite some criticism about some [@bbcnews_2015] on certain percentages of the population, the index is still the golden standard for measuring inequality in societies. 
+The most widely used estimator for inequality is the GINI coefficient. Developed in 1912, by Italian statistician Corrado Gini, it is a way of comparing how distribution income in a country compares with another in which everybody earned the same amount. Inequality on the Gini scale is measured between 0, where everybody is equal, and 100, where all the income is earned by one person. Despite some criticism about some inaccuracies [@bbcnews_2015] on certain percentages of the population, the index is still the golden standard for measuring inequality in societies. 
 
 ## Environment:  
 **Raju write something on Enviroment and Carbon emissions**   
@@ -146,13 +144,11 @@ To do a statistical analysis of the issue, it is extremely important to locate d
 
 # Operationalization
 
-**Count the number of countries and fill the gaps ... below in the passage**  
-
 Dependent Variable: The dependent variable for our research is Environment Perfomance Index, written as _EPI_. Our dataframe consists of EPI for 232 countries from 2002-2014. It is provided by the Yale Center for Environmental Law & Policy. The EPI scores from 2002 to 2012 were measured using historical. These scores differ from the previous 2012, 2010, 2008  and  2010 scores due to changes in raw data sources, differences in methodologies, changes to targets and weightings. These were designed as a time series to show what a country's EPI score would have been in a prior year, given the 2014 EPI's method, framework, and target scores. The value of all EPI scores range from 0 to 100. Higher the EPI value, the better a country performs environmentally. Although we do have EPI for 2016, we have decided to omit that year since we do not the data for other variables after 2014.
 
 Explanatory Variable: The main independent (explanatory) variable used for our research is the Gini coefficient, written as _Gini_. Our dataframe consists of Gini for 138 countries from 2002-2014. Due to the fact that Gini is not measured every year by the respective countries, data for some of the years are missing.
 
-Control Variables: The first control variable is GDP per capita (PPP). It is written as _GDPperCapPPP_. Our dataframe consists of GDP per Capita (PPP) for .... countries from 2002-2014 and it was obtained from the World Bank API and merged into the dataframe that consisted EPI and Gini. The second control variable is Population Density and it is written as _PopulationDens_. Our dataframe conists of Population Density for .... countries from 2002-2014 and it was obtained from the World Bank API and merged into the dataframe that consisted EPI and Gini. We decided to utilize the Log of GDP, given that it changes multiplicatively than additively, so analysis on logarithmic scale is helpful. 
+Control Variables: The first control variable is GDP per capita (PPP). It is written as _GDPperCapPPP_. Our dataframe consists of GDP per Capita (PPP) from 2002-2014 and it was obtained from the World Bank API and merged into the dataframe that consisted EPI and Gini. The second control variable is Population Density and it is written as _PopulationDens_. Our dataframe conists of Population Density from 2002-2014 and it was obtained from the World Bank API and merged into the dataframe that consisted EPI and Gini. We decided to utilize the Log of GDP, given that it changes multiplicatively than additively, so analysis on logarithmic scale is helpful. 
 
 **Raju Write more on the theoretical relevance of the chosen control variables above**  
 
@@ -232,8 +228,7 @@ stargazer::stargazer(m4, m5, m6, type='latex', digits = 2, header = FALSE,
 
 # Robustness
 Checking heteroscedasticity:   
-**Mario: can we show this in a graph as well. And can we show the FE estimate table again after correcting for heteroscedasticity.**
-**Also can we show the results below in a better format**
+
 
 ```{r heteroscedasticity, results='asis', echo=FALSE, warning=FALSE, message=FALSE, header=FALSE}
 bptest(m5, studentize=F)
@@ -254,12 +249,8 @@ stargazer(coef1, coef2, coef3, coef4, type = 'latex', digits = 2, header = FALSE
 
 ```
 
-
 # Conclusion
 
 **Raju: write the conclusion**
 
-# Commands 
-
-Please see the attached file at the end of the document to see all the commands used and for reproducibility.   
-# Bibliography  
+# Bibliography
