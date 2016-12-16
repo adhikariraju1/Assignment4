@@ -197,7 +197,7 @@ ggplot(Combined2012, aes(x=EPI.2012, y=GINI)) +
 A pooled Ordinary Least Squares (OLS) regression estimation is used to estimate the effect of Gini coefficient on EPI over the given time period.    
 
 ```{r regressionpooled, results='asis'}
-stargazer::stargazer(m4, type='latex', digits = 2, header = FALSE,
+stargazer::stargazer(m4, type='latex', digits = 2, header = FALSE, 
           title = 'Effect of Income Inequality on EPI(Pooled OLS)', font.size = 'normalsize')
 ```
 
@@ -207,6 +207,7 @@ The map shows on the website shows graphically that a good EPI score could be re
 However, considering this is a panel data, there is a likelihood that there is a presence of time-invariant panel effects $\alpha_i!=0$. If $\alpha_i!=0$, OLS residuals would suffer from serial correlation and panel heteroscedasticity and OLS estimation will be inefficient. The residual vs fitted plot below shows the presence of heteroscedasticity in the regression model and therefore makes a case to test if other estimation methods will be more efficient in this particular case.
 
 Residual vs Fitted Plot: 
+
 ```{r residualvsfitted, echo=FALSE}
 plot(fitted(m4), residuals(m4),
   xlab = "Fitted Values", ylab = "Residuals")
@@ -214,13 +215,12 @@ plot(fitted(m4), residuals(m4),
   lines(smooth.spline(fitted(m4), residuals(m4)))
 ```
 
-
 When time-invariant panel effects are present we should estimate our panel not with (pooled) OLS, but with the fixed-effects or random effects estimator. We can test for the presence of time-invariant panel effects in the Fixed-effects model by applying an F-test on the joint significance of $\alpha_i$ s.  
 
 The within estimate of our research model generates the result as follows. F-test of the joint significance of $\alpha_i$ s shows that Fixed Effects estimate is better than Pooled OLS in this case as shown by the highly significant F-statistic at 1 percent significance level.  
 
 ```{r regressionfixed, results='asis'}
-stargazer::stargazer(m5, type='latex', digits = 2, header = FALSE,
+stargazer::stargazer(m5, type='latex', digits = 2, header = FALSE, 
           title = 'Effect of Income Inequality on EPI(Fixed Effects)', font.size = 'normalsize')
 ```
 
@@ -240,8 +240,8 @@ phtest(m5, m6)
 Since we have established that a FE estimate is the best option for our research, we can now use it to interpret the results. This is given by the second column in Table 4. The result shows a much lesser effect of Gini coefficient on EPI. A one unit increase in Gini decreases the EPI by 0.06 units. Although the effect is much lesser, the direction of the effect stays intact. The effect is also highly significant at 1 percent significance level. The effect of GDP per Capita (PPP) is also much lesser yet highly significant and strong. A 1 percent increase in GDP per Capita (PPP) increases the EPI by 4.21 units at 1 percent significance level. The R-square value of 0.45 suggests that 45 percent of the change in EPI is described the model, hence suggesting the appropriateness of chosen variables and the model itself. The effect of Population Density stays insignificant.  
 
 
-```{r regression, results='asis'}
-stargazer::stargazer(m4, m5, m6, type='latex', digits = 2, header = FALSE,  
+```{r regressionall, results='asis'}
+stargazer::stargazer(m4, m5, m6, type='latex', digits = 2, header = FALSE,   
           title = 'Effect of Income Inequality on EPI', font.size = 'normalsize')
 ```
 
