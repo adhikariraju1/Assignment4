@@ -193,8 +193,8 @@ ggplot(Combined2012, aes(x=EPI.2012, y=GINI)) +
     geom_smooth(method=lm)
 ```
 
-# Inferential Analysis  
-A pooled Ordinary Least Squares (OLS) regression estimation is used to estimate the effect of Gini coefficient on EPI over the given time period.    
+# Inferential Analysis
+A pooled Ordinary Least Squares(OLS) regression estimation is used to estimate the effect of Gini coefficient on EPI over the given time period. 
 
 ```{r regressionpooled, results='asis'}
 stargazer::stargazer(m4, type='latex', digits = 2, header = FALSE, 
@@ -237,8 +237,7 @@ The choice between a Fixed Fffects(FE) estimator or a Random Effects (RE) estima
 phtest(m5, m6)  
 ```
 
-Since we have established that a FE estimate is the best option for our research, we can now use it to interpret the results. This is given by the second column in Table 4. The result shows a much lesser effect of Gini coefficient on EPI. A one unit increase in Gini decreases the EPI by 0.06 units. Although the effect is much lesser, the direction of the effect stays intact. The effect is also highly significant at 1 percent significance level. The effect of GDP per Capita (PPP) is also much lesser yet highly significant and strong. A 1 percent increase in GDP per Capita (PPP) increases the EPI by 4.21 units at 1 percent significance level. The R-square value of 0.45 suggests that 45 percent of the change in EPI is described the model, hence suggesting the appropriateness of chosen variables and the model itself. The effect of Population Density stays insignificant.  
-
+Since we have established that a FE estimate is the best option for our research, we can now use it to interpret the results. This is given by the second column in Table 4. The result shows a much lesser effect of Gini coefficient on EPI. A one unit increase in Gini decreases the EPI by 0.06 units. Although the effect is much lesser, the direction of the effect stays intact. The effect is also highly significant at 1 percent significance level. The effect of GDP per Capita (PPP) is also much lesser yet highly significant and strong. A 1 percent increase in GDP per Capita (PPP) increases the EPI by 4.21 units at 1 percent significance level. The R-square value of 0.45 suggests that 45 percent of the change in EPI is described the model, hence suggesting the appropriateness of chosen variables and the model itself. The effect of Population density stays insignificant.  
 
 ```{r regressionall, results='asis', echo = FALSE}
 stargazer::stargazer(m4, m5, m6, type='latex', digits = 2, header = FALSE,   
@@ -249,7 +248,6 @@ stargazer::stargazer(m4, m5, m6, type='latex', digits = 2, header = FALSE,
 Checking heteroscedasticity:   
 **Mario: can we show this in a graph as well. And can we show the FE estimate table again after correcting for heteroscedasticity.**
 **Also can we show the results below in a better format**
-
 ```{r heteroscedasticity, results='asis'}
 coeftest(m5) 
 
