@@ -211,8 +211,7 @@ The choice between a Fixed Fffects (FE) estimator or a Random Effects (RE) estim
 ```{r hausman, results='asis'}
 phtest(m5, m6)  
 ```
-  
-  
+
 Since we have established that a FE estimate is the best option for our research, we can now use it to interpret the results. This is given by the second column in Table 4. The result shows a much lesser effect of Gini coefficient on EPI. A one unit increase in Gini decreases the EPI by 0.06 units. Although the effect is much lesser, the direction of the effect stays intact. The effect is also highly significant at 1 percent significance level. The effect of GDP per Capita (PPP) is also much lesser yet highly significant and strong. A 1 percent increase in GDP per Capita (PPP) increases the EPI by 4.21 units at 1 percent significance level. The R-square value of 0.45 suggests that 45 percent of the change in EPI is described the model, hence suggesting the appropriateness of chosen variables and the model itself. The effect of Population density stays insignificant.  
 
 ```{r regressionall, results='asis', echo = FALSE, message=FALSE}
