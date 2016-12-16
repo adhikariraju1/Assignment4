@@ -115,30 +115,29 @@ aggregate(Gini ~ year, Combined2014, mean)
 ```
 
 
-# Abstract
+# Abstract  
 
-*Raju will write the abstract*  
+**Raju will write the abstract**  
 
 _Key words: Inequality, environment, Gini, EPI_
 
 # Introduction
 
-*Raju will add some more stuff if needed*  
+**Raju will add some more stuff if needed**    
 
-Income inequality is one of the biggest issues grappling both developing and developed countries alike. While most development agendas in the past have focused heavily on poverty, it has been clearly established that income inequality is the pressing issue now. The UN Sustainable Development Goals have also put a strong emphasis on income inequality. Increased urbanization and growing reliance on international trade have increased even further the differences between the poor and the rich and through globalization it has become more visible to all. Inequality has been considered the cause of many social, political and economic crisis around the world. Plethora of research on inequality show that it affects education, healthcare [@lynch2000income], the economy, and even voter turnout and elections in many countries. However, the focus of our research won't further explore any of these social or political issues. We aim to research the effect of inequality on the environment. We find this interesting because climate change is one of the biggest threats that our generation is facing, but it is very much disconnected with other social and economic issues that scholars usually talk about. Showing a relationship between inequality and environment can be extremely important to create a better roadmap for development, since policymakers may find better approaches to solve these issues if they are found to be somehow corelated.
+Income inequality is one of the biggest issues grappling both developing and developed countries alike. While most development agendas in the past have focused heavily on poverty, it has been clearly established that income inequality is the pressing issue now. The UN Sustainable Development Goals have also put a strong emphasis on income inequality. Increased urbanization and growing reliance on international trade have increased even further the differences between the poor and the rich and through globalization it has become more visible to all. Inequality has been considered the cause of many social, political and economic crisis around the world. Plethora of research on inequality show that it affects education, healthcare [@lynch2000income], the economy, and even voter turnout and elections in many countries. However, the focus of our research won't further explore any of these social or political issues. We aim to research the effect of inequality on the environment. We find this interesting because climate change is one of the biggest threats that our generation is facing, but it is very much disconnected with other social and economic issues that scholars usually talk about. Showing a relationship between inequality and environment can be extremely important to create a better roadmap for development, since policymakers may find better approaches to solve these issues if they are found to be somehow corelated.  
 
 ## Inequality: 
-*Mario: Cite the source of two bold words below. Bibtex not found*  
+**Mario: Cite the source of two bold words below. Bibtex not found**    
 
 According to the _**IMF**_, the gap between the rich and the poor is at its highest in decades. The organization argues that inequality could be a sign of lack of income mobility and opportunity. Furthermore, it has significant implications for growth and macroeconomic stability, it can concentrate political and decision making power in few hands, lead to a suboptimal use of human resources, cause investment-reducing political and economic instability and increase the risk of crisis.  
 
 The most widely used estimator for inequality is the GINI coefficient. Developed in 1912, by Italian statistician Corrado Gini, it is a way of comparing how distribution income in a country compares with another in which everybody earned the same amount. Inequality on the Gini scale is measured between 0, where everybody is equal, and 100, where all the income is earned by one person. Despite some criticism about some _**inaccuracies**_ on certain percentages of the population, the index is still the golden standard for measuring inequality in societies. 
 
-## Environment:
-*Raju write something on Enviroment and Carbon emissions*   
+## Environment:  
+**Raju write something on Enviroment and Carbon emissions**   
 Show environment issues around the world. UN sustainability stuff  (100 words)
-
-Carbon Emissions and other ways to measure how the envrionment is doing  (100 words)
+Carbon Emissions and other ways to measure how the envrionment is doing  (100 words)  
 
 Environment Performance Index: The Environmental Performance Index (EPI) is an indicator that seeks to quantify the environmental performance of a state's policies. The precursor to this metric was the Pilot Environmental Performance Index, first released in 2002 and designed to supplement the environmental targets in the United Nations Millennium Development Goals. The EPI is developed by the Yale Center for Environmental Law & Policy and ranks countries' performance in two areas: protection of human health and protection of ecosystems. The Index scores national performance in nine issue areas comprised of more than 20 indicators. Here is a table with the basic information about the framework of the indicator.  
 
@@ -165,15 +164,16 @@ To do a statistical analysis of the issue, it is extremely important to locate d
 
 # Operationalization
 
-*Count the number of countries and fill the gaps ... below in the passage*  
+**Count the number of countries and fill the gaps ... below in the passage**  
 
 Dependent Variable: The dependent variable for our research is Environment Perfomance Index, written as _EPI_. Our dataframe consists of EPI for .... countries from 2002-2014. It is provided by the Yale Center for Environmental Law & Policy. The value of EPI ranges from 0 to 100. Higher the EPI value, the better a country performs environmentally. Although we do have EPI for 2016, we have decided to omit that year since we do not the data for other variables after 2014.  
 
 Explanatory Variable: The main independent (explanatory) variable used for our research is the Gini coefficient, written as _Gini_. Our dataframe consists of Gini for .... countries from 2002-2014. Due to the fact, that Gini is not measured every year by the respective countries, data for some of the years are missing.
 
-Control Variables: The first control variable is GDP per capita (PPP). It is written as _GDPperCapPPP_. Our dataframe consists of GDP per Capita (PPP) for .... countries from 2002-2014 and it was obtained from the World Bank API and merged into the dataframe that consisted EPI and Gini. The second control variable is Population Density and it is written as _PopulationDens_. Our dataframe conists of Population Density for .... countries from 2002-2014 and it was obtained from the World Bank API and merged into the dataframe that consisted EPI and Gini.  
+Control Variables: The first control variable is GDP per capita (PPP). It is written as _GDPperCapPPP_. Our dataframe consists of GDP per Capita (PPP) for .... countries from 2002-2014 and it was obtained from the World Bank API and merged into the dataframe that consisted EPI and Gini. The second control variable is Population Density and it is written as _PopulationDens_. Our dataframe conists of Population Density for .... countries from 2002-2014 and it was obtained from the World Bank API and merged into the dataframe that consisted EPI and Gini. 
 
-*Raju Write more on the theoretical relevance of the chosen control variables above*
+**Mario explain why log of GDP is taken**  
+**Raju Write more on the theoretical relevance of the chosen control variables above**  
 
 Research Question: Our research question is "Does income inequality affect the environment performance index?" Through this question, we are planning on analyzing the relationship between inequality and environment so that we can better understand the policy implication of these highly relevant areas.
 
@@ -181,11 +181,11 @@ Regression Equation: The regression equation is written as follows:
             $EPI = \beta_0 + \beta_1(Gini) + \beta_2(GDPperCapPPP) + \beta_3(PopulationDens) + \epsilon$
 
 
-# Descriptive Analysis
+# Descriptive Analysis  
 
-*Mario: can you see if we can add all the maps from the website here under this section since they have descriptive nature. I tried to copy the code chunks for "printing the maps"" here but it doesn"t generate anything when I knit it on pdf.*
+**Mario: can you see if we can add all the maps from the website here under this section since they have descriptive nature. I tried to copy the code chunks for "printing the maps"" here but it doesn"t generate anything when I knit it on pdf.**  
 
-Simple regression plot: *Raju describe what the plot it shows*
+Simple regression plot: **Raju describe what the plot shows**
 
 ```{r ggplot, echo=FALSE}
 ggplot(Combined2012, aes(x=EPI.2012, y=GINI)) +
@@ -196,15 +196,13 @@ ggplot(Combined2012, aes(x=EPI.2012, y=GINI)) +
 # Inferential Analysis  
 A pooled Ordinary Least Sqaures (OLS) regression estimation is used to estimate the effect of Gini coefficient on EPI over the given time period. However, considering this is a panel data, there is a likelihood that there is a presence of time-invariant panel effects $\alpha_i!=0$. If $\alpha_i!=0$, OLS residuals would suffer from serial correlation and panel heteroscedasticity and OLS estimation will be inefficient.  
 
-
-  
 Stargazer of the Pooled OLS
 ```{r regressionpooled, results='asis'}
-stargazer::stargazer(m4, type='latex', digits = 2, 
-          title = 'Effect of Income Inequality on EPI', font.size = 'normalsize')
+stargazer::stargazer(m4, type='latex', digits = 2, header = FALSE,
+          title = 'Effect of Income Inequality on EPI(Pooled OLS)', font.size = 'normalsize')
 ```
 
-Residual vs Fitted Plot: *Raju interpret it and make case on why we should consider FE or RE estimates*
+Residual vs Fitted Plot: **Raju interpret it and make case on why we should consider FE or RE estimates**
 ```{r residualvsfitted, echo=FALSE}
 plot(fitted(m4), residuals(m4),
   xlab = "Fitted Values", ylab = "Residuals")
@@ -217,8 +215,8 @@ When time-invariant panel effects are present we should estimate our panel not w
 
 Use stargazer output of FE model and check the F-statistic. 
 ```{r regressionfixed, results='asis'}
-stargazer::stargazer(m5, type='latex', digits = 2, 
-          title = 'Effect of Income Inequality on EPI', font.size = 'normalsize')
+stargazer::stargazer(m5, type='latex', digits = 2, header = FALSE,
+          title = 'Effect of Income Inequality on EPI(Fixed Effects)', font.size = 'normalsize')
 ```
 
 
@@ -226,13 +224,14 @@ We can test for the presence of time-invariant panel effects in the Random-Effec
 
 Show Breusch-Pagan test for Random Effects
 
-*Couldn't figure out how to do this. The result of this one should show whether pooled OLS or RE is better.*
+**Couldn't figure out how to do this. The result of this one should show whether pooled OLS or RE is better.**
 
-Then do a Hausman test   
+Then do a Hausman test     
 ```{r hausman, results='asis'}
 phtest(m5, m6)  
 ```
-Then show all the regressions in one place and interpret the most effective estimation method.
+
+Then show all the regressions in one place and interpret the most effective estimation method.  
 
 ```{r regression, results='asis'}
 stargazer::stargazer(m4, m5, m6, type='latex', digits = 2, header = FALSE,  
@@ -240,9 +239,9 @@ stargazer::stargazer(m4, m5, m6, type='latex', digits = 2, header = FALSE,
 ```
 
 # Robustness
-Checking heteroscedasticity: 
-*Mario: can we show this in a graph as well. And can we show the FE estimate table again after correcting for heteroscedasticity.*
-
+Checking heteroscedasticity:   
+**Mario: can we show this in a graph as well. And can we show the FE estimate table again after correcting for heteroscedasticity.**
+**Also can we show the results below in a better format**
 ```{r heteroscedasticity, results='asis'}
 coeftest(m5) 
 
@@ -256,8 +255,9 @@ coeftest(m5, vcovHC(m5, type = "HC3"))
 
 # Conclusion
 
-*Raju: write the conclusion*
+**Raju: write the conclusion**
 
 # Commands 
-Please see the attached file at the end of the document to see all the commands used and for reproducibility. 
-# Bibliography
+Please see the attached file at the end of the document to see all the commands used and for reproducibility.   
+# Bibliography  
+  
