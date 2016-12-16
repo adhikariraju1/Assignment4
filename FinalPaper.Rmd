@@ -178,7 +178,7 @@ Control Variables: The first control variable is GDP per capita (PPP). It is wri
 Research Question: Our research question is "Does income inequality affect the environment performance index?" Through this question, we are planning on analyzing the relationship between inequality and environment so that we can better understand the policy implication of these highly relevant areas.
 
 Regression Equation: The regression equation is written as follows:  
-            $EPI = \beta_0 + \beta_1(Gini) + \beta_2(GDPperCapPPP) + \beta_3(PopulationDens) + \epsilon$
+            $EPI = \beta_0 + \beta_1(Gini) + \beta_2 log(GDPperCapPPP) + \beta_3(PopulationDens) + \epsilon$
 
 
 # Descriptive Analysis  
@@ -187,7 +187,7 @@ Regression Equation: The regression equation is written as follows:
 
 Simple regression plot: **Raju describe what the plot shows**
 
-```{r ggplot, echo=FALSE}
+```{r ggplot, echo = FALSE}
 ggplot(Combined2012, aes(x=EPI.2012, y=GINI)) +
     geom_point(shape=1) + 
     geom_smooth(method=lm)
@@ -208,7 +208,7 @@ However, considering this is a panel data, there is a likelihood that there is a
 
 Residual vs Fitted Plot: 
 
-```{r residualvsfitted, echo=FALSE}
+```{r residualvsfitted, echo = FALSE}
 plot(fitted(m4), residuals(m4),
   xlab = "Fitted Values", ylab = "Residuals")
   abline(h=0, lty=2)
@@ -240,7 +240,7 @@ phtest(m5, m6)
 Since we have established that a FE estimate is the best option for our research, we can now use it to interpret the results. This is given by the second column in Table 4. The result shows a much lesser effect of Gini coefficient on EPI. A one unit increase in Gini decreases the EPI by 0.06 units. Although the effect is much lesser, the direction of the effect stays intact. The effect is also highly significant at 1 percent significance level. The effect of GDP per Capita (PPP) is also much lesser yet highly significant and strong. A 1 percent increase in GDP per Capita (PPP) increases the EPI by 4.21 units at 1 percent significance level. The R-square value of 0.45 suggests that 45 percent of the change in EPI is described the model, hence suggesting the appropriateness of chosen variables and the model itself. The effect of Population Density stays insignificant.  
 
 
-```{r regressionall, results='asis'}
+```{r regressionall, results='asis', echo = FALSE}
 stargazer::stargazer(m4, m5, m6, type='latex', digits = 2, header = FALSE,   
           title = 'Effect of Income Inequality on EPI', font.size = 'normalsize')
 ```
@@ -266,5 +266,6 @@ coeftest(m5, vcovHC(m5, type = "HC3"))
 **Raju: write the conclusion**
 
 # Commands 
+
 Please see the attached file at the end of the document to see all the commands used and for reproducibility.   
 # Bibliography  
