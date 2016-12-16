@@ -119,4 +119,5 @@ plot_ly(Combinedmaps, x = ~EPI, y = ~Gini,
 
 
 ## Summary
-One paragraph with the executive summary
+
+Social scientists who have studied the effect of income inequality on the environment have often found them to be intertwined concepts. In this paper, we identified two important variables that represent inequality and environment performance and statistically analyzed their relationship. We found that inequality has a negative impact on the Environment Performance Index, meaning more unequal countries will perform bad on the environment. The important point that have risen from this analysis is that there is a growing need to look at environment through social and economic lenses. To protect the environment doesn't only mean to reduce carbon emissions through emission caps and command and control mechanisms, but also through promoting a sustainable economic development that creates more equal societies. Currently, the effect of climate change falls heavily on poor and unequal countries. However, they are unable to do anything about it since policies in those countries prioritize economic development over environment protection. Therefore, focusing on inequality may serve as a catalyst to solve the issue of environment, in those places, in ways it has not been done before.
